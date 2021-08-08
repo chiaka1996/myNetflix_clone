@@ -136,7 +136,6 @@ signInBtn.addEventListener('click', async(e) => {
         signinDiv.innerHTML = 'Sign in';
         signinDiv.classList.remove('loader');
         backendError.style.display = 'block';
-        console.log(error)
     
         if(!error.response){
           backendError.innerHTML= "Something went wrong. Please check your internet connection";
