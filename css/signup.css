@@ -1,0 +1,684 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap'); */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.loader{
+    border-top: 2px solid white;
+    border-radius: 50%;
+    margin: auto;
+    width: 15px;
+    height: 15px;
+    opacity: 0.8;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+.body_container{ 
+    width: 100%;
+    overflow-x: hidden;
+    /* background-color: white; */
+    font-family: 'Signika', sans-serif;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 1.5%; 
+}
+
+.flex-shift{
+    flex: 1;
+} 
+
+nav img{ 
+    width: 13%;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 5%;
+    margin-top: 1%;
+    font-weight: 630;
+}
+
+.step0{
+    padding-top: 5%;
+    text-align: center;
+}
+
+.device_icons{
+    color: #E91717;
+    margin-bottom: 2%;
+}
+
+.device_icons i{
+    font-size: 70px;
+}
+
+.device_icons .fa-laptop{
+    margin-right: 2%;
+}
+
+.device_icons .fa-tv{
+    margin-right: 2%;
+    font-size: 90px;
+}
+
+.device_icons .fa-mobile{
+    font-size: 60px;
+}
+
+#step{
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.numb{
+    font-weight: 800;
+}
+
+.finish{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+#topNotes{
+    margin-top: 1%;
+}
+
+.notes{
+    font-size: 20px;
+    color: #303030;
+}
+
+#button1, #button2, #button3, #button4{
+    background-color: #E91717;
+    color: white;
+    font-size: 25px;
+    width: 30%;
+    border: 1px solid #E91717;
+    margin-top: 3%;
+    padding: 1.2% 0 1.2% 0;
+    cursor: pointer;
+
+}
+
+/* welcome back */
+.welcome_body{
+    margin: 3% auto;
+    width: 33%;
+    color: #333333;
+}
+
+.backendError, .backendErrorMessage{
+    background-color: orange;
+    color: white;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 500;
+    padding: 0.5% 4%;
+    margin-bottom: 2%;
+    display: none;
+}
+
+.backendError a{
+    text-decoration-color: white;
+}
+
+.welcome_step{
+    font-size: 13px;
+    color: #333;
+}
+
+.welcome_back{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 45px;
+}
+
+.watching_in_no_time{
+    font-size: 19px;
+    line-height: 30px;
+}
+
+#welcome_email_div{
+    font-weight: 500;
+    margin-top: 5%;
+}
+
+#welcome_email_span{
+    font-weight: 600;
+}
+
+.welcome_back_password{
+    width: 100%;
+    height: 62px;
+    border: 1px solid #373434;
+    font-size: 18px;
+    margin-top: 4%;
+    padding-left: 3%;
+    outline: none;
+}
+
+.welcome_back_password_div{
+    position: relative;
+}
+
+.welcome_back_password_div::before{
+    content: "Enter Password";
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    color: #333333;
+    font-weight: 500;
+    font-size: 18px;
+    transition: top 0.5s ease-out;
+}
+
+.welcomeInputFocus{
+    position: relative;
+}
+
+.welcomeInputFocus::before{
+    position: absolute;
+    content: "Enter Password";
+    top: 35%;
+    left: 3%;
+    font-size: 12px;
+    font-weight: 600;
+    color: #333333;
+    transition: top 0.5s ease-out;
+}
+
+.welcomeBackError{
+    color: red;
+    font-size: 13px;
+}
+
+.welcome_back_forgot_password{
+    font-size: 17px;
+    margin: 3% 0 2% 0;
+}
+
+.welcome_back_forgot_password a{
+    color: rgb(61, 181, 255);
+}
+
+#welcome_back_button{
+    background-color: #E91717;
+    color: white;
+    font-size: 25px;
+    width: 100%;
+    border: 1px solid #E91717;
+    margin-top: 3%;
+    padding: 1.2% 0 1.2% 0;
+    cursor: pointer;
+    height: 65px;
+    border-radius: 2px;
+}
+
+/* create password */
+.main_body {
+    margin: 3% auto;
+    width: 33%;
+    color: #333333;
+}
+
+.step{
+    font-size: 12px;
+}
+
+.create_password, .choose_plan, .choose_plan_right_for_you{
+    margin-top: 1%;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.few_more_steps {
+    margin-top: 1%;
+    font-size: 19px;
+    /* color: #000000; */
+    line-height: 30px;
+}
+
+.input_details {
+    width: 100%;
+    height: 60px;
+    border: 0.5px solid #333333;
+    font-size: 18px;
+    margin-top: 2.5%;
+    font-weight: 500;
+    padding-left: 2%;
+    outline: none;
+}
+
+.errorEmail, .errorPassword{
+    color: #E34B4F;
+    font-size: 13px;
+}
+
+.create_email_div, .create_password_div, .create_email_focus,
+.create_password_focus{
+    position: relative;
+}
+
+.create_email_div::before, .create_password_div::before{
+    position: absolute;
+    top: 45%;
+    left: 2%;
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(170, 167, 167);
+    content: 'Email';
+    transition: top 0.5s ease-in-out;
+}
+
+.create_password_div::before{
+    content: 'Add a password';
+}
+
+.create_email_focus::before,.create_password_focus::before {
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(170, 167, 167);
+    content: 'Email';
+    transition: top 0.5s ease-in-out;
+}
+
+.create_password_focus::before{
+    content: 'Add a password';
+}
+
+.special_offer_container{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+#special_offers {
+    width: 12%;
+    height: 25px;
+    margin: 0;
+}
+
+.special_offer_container span{
+    font-size: 14px;
+    margin-top: 1%;
+    /* color: #373434; */
+}
+
+#button2, #button3{
+    width: 100%;
+    height: 65px;
+    border-radius: 4px;
+}
+
+/* choose plan  */
+.choose_plan_container{
+    margin: 9% auto;
+    width: 25%;
+    text-align: center;
+}
+
+.fa-check-circle{
+    color: white;
+    background: #E91717;
+    width: 55px;
+    height: 55px;
+    font-size: 55px;
+    border-radius: 50px;
+}
+.choose_your_plan{
+    margin-top: 10%;
+}
+
+.choose_plan{
+    margin-bottom: 10%;
+}
+
+.plan_notes{
+    display: flex;
+    flex-direction: row;
+    margin: 5% auto 0 auto;
+    text-align: left;
+    font-size: 18px;
+    width: 80%;
+    /* padding-left: 20%; */
+}
+
+.plan_notes i{
+    line-height: 21px;
+    color: red;
+}
+
+.plan_notes span{
+    line-height: 20px;
+}
+
+#button3{
+    margin-top: 12%;
+    height: 65px;
+}
+
+/* choose plan that's right for you */
+.right_plan{
+    width: 80%;
+    margin: 2% auto;
+}
+
+#right_plan_step{
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.choose_plan_right_for_you{
+    margin-bottom: 1.5%;
+}
+
+.right_plan span{
+    line-height: 28px;
+}
+
+.check{
+    color: red;
+    margin-right: 1%;
+}
+
+.plans_container{
+    display: grid;
+    grid-template-rows: auto;
+    margin-top: 6%;
+}
+
+.plan_item_1, .plan_item_2, .plan_item_3,
+.plan_item_4, .plan_item_5{
+    display: grid;
+    grid-template-columns: 40% 15% 15% 15% 15%;
+}
+
+.description1, .description2, 
+.description3, .description4{
+    position: relative;
+    height: 60px;
+    background-color: rgba(233, 23, 23, 0.6);
+    color: white;
+    margin-right: 6%;
+    text-align: center;
+    padding-top: 35%;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.descriptionArrow{
+    position: relative;
+    height: 60px;
+    background-color: red;
+    color: white;
+    margin-right: 6%;
+    text-align: center;
+    padding-top: 35%;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.descriptionArrow:after{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 100%;
+    left: 50%;
+    margin-left: -12.5%;
+    content: ' ';
+    transform: rotate(45deg);
+    margin-top: -13px;
+    background: red;
+}
+
+.plan_item_2{
+    padding: 4% 0 1% 0;
+    border-bottom: 1px solid #AFAFAF;
+}
+
+.colorChange{
+    color: red;
+}
+
+.plan_item_3, .plan_item_4, .plan_item_5{
+    padding: 3% 0 3% 0;
+    border-bottom: 1px solid #AFAFAF; 
+}
+
+.plan_item_5{
+    border-bottom: none;
+}
+
+.plan_item_header{
+    font-weight: 510;
+    font-size: 17px;
+}
+
+.monthly_price, .video_quality, .resolution,
+.devices{
+    text-align: center;
+    font-weight: 550;
+    font-size: 17px;
+}
+
+.devices div {
+    margin-bottom: 3%;
+    font-size: 13px;
+}
+
+.bottom_notes{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.bottom_notes span {
+    color: lightskyblue;
+}
+
+.button_container{
+    text-align: center;
+}
+
+/* set up payment */
+.set_up_payment {
+    text-align: center;
+    padding-top: 7%;
+}
+
+.lock{
+    border-radius: 50px;
+    border: 2px solid red;
+    width: 30px;
+    height: 30px; 
+    margin: 0 auto 3% auto;
+    padding: 0.5%; 
+ } 
+
+.fa-lock{
+    color:#E91717;
+} 
+
+.payment_header{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 70px;
+    margin-bottom: 1%;
+}
+
+.membership{
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+.no_commitments, .no_commitments1 {
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+.no_commitments1{
+    margin-top: 2%;
+}
+
+.cards{
+    margin: 4% auto;
+    border: 2px solid #AFAFAF;
+    padding: 1.5% 1% 1.5% 1%;
+    width: 35%;
+    color: black;
+    text-align: left;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.secure_server{
+    position: absolute;
+    top: -28%;
+    right: 4.4%;
+    color: black;
+    font-size: 11px;
+}
+
+.secure_lock{
+    color: #FFC300;
+    position: absolute;
+    top: -37%;
+    right: 0.5%;
+    font-size: 20px;
+}
+
+.cards img{
+    width: 35px;
+    height: 20px;
+    margin-left: 3%;
+    border: 1px solid #AFAFAF;
+}
+
+.credit-debit{
+    font-weight: 500;
+}
+
+.flex-card{
+    flex: 1;
+}
+
+.fa-chevron-right{
+    color: #AFAFAF;
+}
+
+/* signup5, page for inputing card details */
+.payment_container{
+    width: 33%;
+    margin: 0 auto;
+    padding-top: 3%;
+}
+
+#payment_img img{
+    width: 35px;
+    height: 20px;
+    margin-right: 0.5%; 
+    border: 1px solid #AFAFAF;
+    margin-bottom: 0.5%;
+}
+
+form input{
+    width: 98.5%;
+    height: 55px;
+    border: 1px solid #AFAFAF;
+    margin-bottom: 3%;
+}
+
+.credit_header{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+      margin-bottom: 4%;
+      margin-top: 3%;
+}
+
+#change_plan{
+    display: flex;
+    flex-direction: row;
+    background-color: #E5E5E5;
+    padding: 4.5% 3% 4.5% 3%;
+}
+
+.plan_flex{
+    flex: 1;
+}
+
+#change_amount{
+    color: black;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+#plan_note{
+    color: rgba(55, 52, 52, 0.7);
+}
+
+#change{
+    margin-top: 3%;
+    color: #366BEE;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none
+}
+
+#processed_internationally, #privacy_statement{
+    color: #373434B2;
+    font-size: 13px;
+}
+
+#privacy_statement span{
+    color: #366BEE;
+}
+
+#privacy_checkbox{
+    display: flex;
+    flex-direction: row;
+    padding-top: 5%;
+    margin-bottom: 13%;
+}
+
+#privacy_checkbox input{
+    width: 35px;
+    height: 35px;
+}
+
+#privacy_checkbox div{
+    margin-top: 3%;
+    color: rgba(55, 52, 52, 0.7);
+    margin-left: 1%;
+    font-weight: bold;
+}
+
+.start_membership button{
+    background-color: #E91717;
+    color: white;
+    padding: 5% 0;
+    width: 100%;
+    outline: #E91717;
+    font-size: 22px;
+    border: 1px solid #E91717;
+}
+
