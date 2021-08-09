@@ -8,11 +8,34 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Sign In</title>
 </head>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '2619627735005408',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v11.0'
+    });
+      
+    FB.AppEvents.logPageView();  
+    fbSDKLoaded(); 
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+  
+  </script>
 <body>
   <div  class="wrapper">
     <div class="header">
         <div class="logo">
-            <a href="index.html"><img src="../images/Netflix Logo.png" alt=""></a>
+            <a href="../index.html"><img src="../images/Netflix Logo.png" alt=""></a>
         </div>
     </div>
 
@@ -49,7 +72,9 @@
              <div class="login footer">
                  <div class="login-facebook">
                     <span><img src="../images/logos_facebook.png" alt="fb"></span>
-                    <span><a href="#">Login with Facebook</a></span>
+                    <span onlogin="checkLoginState()">Login with Facebook</span>
+                    <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                    </fb:login-button> -->
                  </div>
                  <div class="sign-up">
                      <p>New to Netflix? <a href="Signup.html">Sign up now</a></p>
@@ -89,6 +114,7 @@
   </div>
 
 </div>  
+<script src="../js/fb.js"></script>
 <script src="../js/signin.js"></script>
 </body>
 </html>
