@@ -8,29 +8,6 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Sign In</title>
 </head>
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '2619627735005408',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v11.0'
-    });
-      
-    FB.AppEvents.logPageView();  
-    fbSDKLoaded(); 
-      
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-  
-  </script>
 <body>
   <div  class="wrapper">
     <div class="header">
@@ -114,6 +91,29 @@
   </div>
 
 </div>  
+<script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '2619627735005408',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v11.0'
+      });
+        
+      FB.AppEvents.logPageView();  
+      fbSDKLoaded(); 
+        
+    };
+  
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+    
+    </script>
 <script src="../js/fb.js"></script>
 <script src="../js/signin.js"></script>
 </body>
