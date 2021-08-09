@@ -1,9 +1,14 @@
 const loginWithFacebookSpan  = document.querySelector('.facebookLogin');
  
-const loginWithFacebook = () => {
+const loginWithFacebook = async() => {
     FB.login( response => {
        console.log(response) 
-    }, {scope: 'public_profile, email'})
+       FB.api('/me', function(response) {
+        console.log(JSON.stringify(response));
+    });
+    }, {scope: 'public_profile,email'})
+
+    // const postApi = await axios.post('')
     return false
 }
 
