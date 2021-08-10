@@ -1,6 +1,6 @@
 const loginWithFacebookSpan  = document.querySelector('.facebookLogin');
  
-const loginWithFacebook = async () => {
+const loginWithFacebook = () => {
     FB.login( response => {
        console.log(response) 
        const {accessToken, userID} = response.authResponse;
@@ -12,10 +12,11 @@ const loginWithFacebook = async () => {
         id: userID
     }
 
-    const postApi = await axios.post('https://zuri-netlify-backend.herokuapp.com/apis/facebookLogin', data);
-
-    console.log(postApi)
-
+     axios.post('https://zuri-netlify-backend.herokuapp.com/apis/facebookLogin', data)
+     .then((res) => {
+        console.log(res)
+     })
+     .catch((err) => console.log(err))
 
     }, {scope: 'public_profile,email'})
    
