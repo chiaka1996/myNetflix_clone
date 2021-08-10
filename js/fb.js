@@ -23,7 +23,7 @@ const loginWithFacebook = () => {
     return false
 }
 
-loginWithFacebookSpan.addEventListener('click', loginWithFacebook(), false);
+loginWithFacebookSpan.addEventListener('click', loginWithFacebook, false);
 
 // let loginWithFacebook = _ => _
 
