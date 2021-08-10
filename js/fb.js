@@ -1,6 +1,6 @@
 const loginWithFacebookSpan  = document.querySelector('.facebookLogin');
  
-const loginWithFacebook = async() => {
+const loginWithFacebook = async () => {
     FB.login( response => {
        console.log(response) 
        const {accessToken, userID} = response.authResponse;
@@ -22,7 +22,7 @@ const loginWithFacebook = async() => {
     return false
 }
 
-loginWithFacebookSpan.addEventListener('click', loginWithFacebook, false);
+loginWithFacebookSpan.addEventListener('click', loginWithFacebook(), false);
 
 // let loginWithFacebook = _ => _
 
