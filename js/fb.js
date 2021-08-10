@@ -3,12 +3,22 @@ const loginWithFacebookSpan  = document.querySelector('.facebookLogin');
 const loginWithFacebook = async() => {
     FB.login( response => {
        console.log(response) 
-       FB.api('/me', function(response) {
-        console.log(JSON.stringify(response));
-    });
-    }, {scope: 'public_profile,email'})
+       const {accessToken, userID} = response.authResponse;
+    //    FB.api('/me', function(response) {
+    //     console.log(JSON.stringify(response));
+    // });
+    const data = {
+        accessToken,
+        id: userID
+    }
 
-    // const postApi = await axios.post('')
+    const postApi = await axios.post('https://zuri-netlify-backend.herokuapp.com/apis/facebookLogin', data);
+
+    console.log(postApi)
+
+
+    }, {scope: 'public_profile,email'})
+   
     return false
 }
 
