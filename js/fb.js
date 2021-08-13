@@ -1,12 +1,10 @@
 const loginWithFacebookSpan  = document.querySelector('.facebookLogin');
+const backendError = document.querySelector('.backendError');
  
 const loginWithFacebook = () => {
-    FB.login( response => {
-       console.log(response) 
+    FB.login( response => { 
        const {accessToken, userID} = response.authResponse;
-    //    FB.api('/me', function(response) {
-    //     console.log(JSON.stringify(response));
-    // });
+
     const data = {
         accessToken,
         id: userID
@@ -15,8 +13,48 @@ const loginWithFacebook = () => {
      axios.post('https://zuri-netlify-backend.herokuapp.com/apis/facebookLogin', data)
      .then((res) => {
         console.log(res)
+        const {data, status, accessToken,facebookID} = res;
+        const {registrationCompleted,planType,card} = data.user;
+
+        if(status === 200){
+        sessionStorage.setItem("email", email);
+        sessionStorage.setItem("registrationCompleted", registrationCompleted);
+        sessionStorage.setItem("token", postReq.data.user.token);
+        sessionStorage.setItem("planType", planType);
+        sessionStorage.setItem("firstName", card.firstName);
+        sessionStorage.setItem("lastName", card.lastName);
+        sessionStorage.setItem("ccv", card.ccv);
+        sessionStorage.setItem("cardNumber", card.cardNumber);
+        sessionStorage.setItem("expirationDate", card.expirationDate);
+        sessionStorage.setItem("accessToken", accessToken);
+        sessionStorage.setItem("facebookID", facebookID);
+
+        if(registrationCompleted){
+            window.location.href = 'dashboard.html';
+        }
+        else{
+            window.location.href = 'Signup2.html'; 
+        }
+
+        }
+        
      })
-     .catch((err) => console.log(err))
+     .catch((error) => {
+        if(!error.response){
+            backendError.innerHTML= "Something went wrong. Please check your internet connection";
+            return;
+          }
+      
+          if(error.response.status === 400){
+            backendError.innerHTML = "Their is a problem from our end. try again later"
+            return;
+          }
+      
+          if(error.response.status === 500){
+            backendError.innerHTML = 'Their is a problem from our end. try again later';
+            return;
+            }
+        })
 
     }, {scope: 'public_profile,email'})
    
@@ -24,21 +62,3 @@ const loginWithFacebook = () => {
 }
 
 loginWithFacebookSpan.addEventListener('click', loginWithFacebook, false);
-
-// let loginWithFacebook = _ => _
-
-// const fbSDKLoaded = () => {
-    
-// FB.getLoginStatus(function(response) {
-//     // console.log(statusChangeCallback(response));
-//     console.log(response);
-//     if(response.status == "not_authorized"){
-//         loginWithFacebook = _ => {
-//             FB.login(response => {
-//                 console.log(response);
-//             })
-//         }
-//     }
-// });
-
-// }
