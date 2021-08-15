@@ -13,13 +13,13 @@ const loginWithFacebook = () => {
      axios.post('https://zuri-netlify-backend.herokuapp.com/apis/facebookLogin', data)
      .then((res) => {
         console.log(res)
-        const {data, status, accessToken,facebookID} = res;
-        const {registrationCompleted,planType,card} = data.user;
+        const {data, status} = res;
+        const {accessToken, facebookID} = data;
+        const {registrationCompleted,planType,card,email} = data.user;
 
         if(status === 200){
         sessionStorage.setItem("email", email);
         sessionStorage.setItem("registrationCompleted", registrationCompleted);
-        sessionStorage.setItem("token", postReq.data.user.token);
         sessionStorage.setItem("planType", planType);
         sessionStorage.setItem("firstName", card.firstName);
         sessionStorage.setItem("lastName", card.lastName);
@@ -28,6 +28,7 @@ const loginWithFacebook = () => {
         sessionStorage.setItem("expirationDate", card.expirationDate);
         sessionStorage.setItem("accessToken", accessToken);
         sessionStorage.setItem("facebookID", facebookID);
+        console.log(registrationCompleted)
 
         if(registrationCompleted){
             window.location.href = 'dashboard.html';
