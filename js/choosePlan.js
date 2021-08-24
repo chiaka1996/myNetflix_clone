@@ -6,7 +6,7 @@ const planItem2 = document.querySelector(".plan_item_2");
 const planItem3 = document.querySelector(".plan_item_3");
 const planItem4 = document.querySelector(".plan_item_4");
 const planItem5 = document.querySelector(".plan_item_5");
-
+const submitBtn = document.querySelector(".planSubmitBtn");
 
 //loop through plan item children
 let loopThroughPLanChildren = (plan,num,planType) => {
@@ -58,4 +58,24 @@ standard.addEventListener('click', () => {
 // onclick premium version
 premium.addEventListener('click', () => {
   changeColorFunction(planItem2,planItem3,planItem4,planItem5,4,premium);
+})
+
+submitBtn.addEventListener('click', async () => {
+  // sessionStorage.setItem("_id", _id);
+  // sessionStorage.setItem("email", email);
+  // sessionStorage.setItem("registrationCompleted", registrationCompleted);
+  // sessionStorage.setItem("token", token);
+  // sessionStorage.setItem("planType", planType);
+  // sessionStorage.setItem("firstName", card.firstName);
+  // sessionStorage.setItem("lastName", card.lastName);
+  // sessionStorage.setItem("ccv", card.ccv);
+  // sessionStorage.setItem("cardNumber", card.cardNumber);
+  // sessionStorage.setItem("expirationDate", card.expirationDate);
+  // sessionStorage.setItem("NetflixEmail", NetflixEmail);
+
+  const _id = sessionStorage.getItem('_id');
+  const planType = sessionStorage.getItem("planType");
+
+  console.log(planType)
+
 })

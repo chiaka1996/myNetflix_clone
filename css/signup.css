@@ -412,24 +412,26 @@ nav a{
 .description1, .description2, 
 .description3, .description4{
     position: relative;
-    height: 60px;
+    /* height: 120px; */
     background-color: rgba(233, 23, 23, 0.6);
     color: white;
     margin-right: 6%;
     text-align: center;
-    padding-top: 35%;
+    padding-top: 30%;
+    padding-bottom: 30%;
     font-weight: 600;
     cursor: pointer;
 }
 
 .descriptionArrow{
     position: relative;
-    height: 60px;
+    /* height: 120px; */
     background-color: red;
     color: white;
     margin-right: 6%;
     text-align: center;
-    padding-top: 35%;
+    padding-top: 30%;
+    padding-bottom: 30%;
     font-weight: 600;
     cursor: pointer;
 }
