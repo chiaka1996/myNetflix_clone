@@ -147,7 +147,7 @@ topInputButton.addEventListener('click', async () => {
        
         let postRequest = await axios.post('https://zuri-netlify-backend.herokuapp.com/apis/checkemail', payload)
         if(postRequest.status === 200) {
-        window.location.href = 'Signup0.html';
+        window.location.href = 'html/Signup0.html';
         return;
     }
     }
@@ -161,7 +161,7 @@ topInputButton.addEventListener('click', async () => {
        
         if(error.response.status === 406)
             sessionStorage.setItem("email", email);
-            window.location.href = "welcomeback.html";
+            window.location.href = "html/welcomeback.html";
     }     
 })
 
@@ -194,7 +194,7 @@ bottomInputButton.addEventListener('click', async () => {
        
         let postRequest = await axios.post('https://zuri-netlify-backend.herokuapp.com/apis/checkemail', payload)
         if(postRequest.status === 200) {
-        window.location.href = 'Signup0.html';
+        window.location.href = 'html/Signup0.html';
         return;
     }
     }
@@ -208,7 +208,7 @@ bottomInputButton.addEventListener('click', async () => {
        
         if(error.response.status === 406)
             sessionStorage.setItem("email", email);
-            window.location.href = "welcomeback.html";
+            window.location.href = "html/welcomeback.html";
     }     
 })
 
