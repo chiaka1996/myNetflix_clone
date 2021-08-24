@@ -123,7 +123,7 @@ submitBtn.addEventListener('click', async () => {
         sessionStorage.setItem("cardNumber", card.cardNumber);
         sessionStorage.setItem("expirationDate", card.expirationDate);
         sessionStorage.setItem("NetflixEmail", NetflixEmail);
-        // window.location.href = 'Signup2.html';
+        window.location.href = 'Signup2.html';
 
         }
     }
