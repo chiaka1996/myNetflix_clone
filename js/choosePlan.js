@@ -76,6 +76,6 @@ submitBtn.addEventListener('click', async () => {
   const _id = sessionStorage.getItem('_id');
   const planType = sessionStorage.getItem("planType");
 
-  console.log(planType)
+  console.log(_id)
 
 })
