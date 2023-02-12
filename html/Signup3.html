@@ -16,7 +16,7 @@
     <nav>
     <img src="../images/Netflix Logo@2x.png" alt="netflix Logo">
     <div class="flex-shift"></div>
-    <a href="signin.html">Sign Out</a>
+    <span class="signOut">Sign Out</span>
     </nav>
 
     <div class="right_plan"> 
@@ -37,9 +37,8 @@
     <span>Change or cancel your plan anytime.</span>
 
     <div class="plans_container"> 
-
     <div class="plan_item_1">
-    <div class="description"></div>
+    <div class="description desktopView"></div>
     <div class="description1">
     Mobile
     </div>
@@ -54,32 +53,38 @@
     </div>
     </div>
 
+    <div class="plan_item_header mobileView">
+       <span>Monthly price</span> 
+    </div>
     <div class="plan_item_2">
-    <div class="plan_item_header">Monthly price</div>
-    <div class="monthly_price mobile1">NGN 1,200</div>
-    <div class="monthly_price basic1">NGN 2,900</div>
-    <div class="monthly_price">NGN 3,600</div>
-    <div class="monthly_price" style="color:red">NGN 4,000</div>
+    <div class="plan_item_header desktopView">Monthly price</div>
+    <div class="monthly_price mobile1">N1,200</div>
+    <div class="monthly_price basic1">N2,900</div>
+    <div class="monthly_price">N3,600</div>
+    <div class="monthly_price" style="color:red">N4,000</div>
     </div>
 
+    <div class="plan_item_header mobileView">Video Quality</div>
     <div class="plan_item_3">
-    <div class="plan_item_header">Video Quality</div>
+    <div class="plan_item_header desktopView">Video Quality</div>
     <div class="video_quality mobile2">Good</div>
     <div class="video_quality basic2">Good</div>
     <div class="video_quality">Better</div>
     <div class="video_quality" style="color: red">Best</div>
     </div>
 
+    <div class="plan_item_header mobileView">Resolution</div>
     <div class="plan_item_4">
-    <div class="plan_item_header">Resolution</div> 
+    <div class="plan_item_header desktopView">Resolution</div> 
     <div class="resolution mobile3">480p</div>
     <div class="resolution basic3">480p</div>
     <div class="resolution">1080p</div>
     <div class="resolution" style="color:red">4k + HDR</div>
     </div>
 
+    <div class="plan_item_header mobileView">Devices you can use to watch</div>
     <div class="plan_item_5">
-    <div class="plan_item_header">Devices you can use to watch</div>
+    <div class="plan_item_header desktopView">Devices you can use to watch</div>
     <div class="devices mobile4">
     <i class="fa fa-mobile fa-2x"></i><br/>
     <div>Phone</div><br/>
@@ -151,42 +156,61 @@
     </div>
 
     <div class="button_container">
-    <button id="button4" class="planSubmitBtn">Next</button>
+    <button id="button4" class="planSubmitBtn">
+    <div class="planDiv">Next</div>
+    </button>
     </div>
 
     </div>
     <div class="footer_container">
-    <div id="footer_header"> 
-        Questions? Contact Us.
-    </div>
-
-    <div class="footer-link">
-        <div class="first_links">
-            <ul>
-            <li>FAQ</li>
-            <li>Cookiie Preferences</li>
-            </ul>     
+        <div id="footer_header" style="margin-bottom: 7%;"> 
+           Questions? Contact Us.
         </div>
-
-        <div class="second_link"> 
-            <ul>
-            <li>Help Center</li>
-            <li>Corporate Information</li>
-            </ul>
+   
+        <div class="footer-link desktopView">
+           <div class="first_links">
+               <ul>
+               <li>FAQ</li>
+               <li>Cookiie Preferences</li>
+               </ul>     
+           </div>
+   
+           <div class="second_link"> 
+               <ul>
+               <li>Help Center</li>
+               <li>Corporate Information</li>
+               </ul>
+           </div>
+   
+           <div class="third_link"> 
+           <ul> 
+           <li>Terms Of Use</li>
+           </ul>
+           </div>
+   
+           <div class="fourth_link"> 
+           <ul> 
+           <li>Privacy</li>
+           </ul>
+           </div>
         </div>
-
-        <div class="third_link"> 
-        <ul> 
-        <li>Terms Of Use</li>
-        </ul>
+   
+        <div class="footer-link mobileView"> 
+           <div class="first_links">
+               <ul>
+               <li>FAQ</li>
+               <li>Terms Of Use</li>
+               <li>Cookiie Preferences</li>
+               </ul>     
+           </div>
+           <div class="second_link"> 
+               <ul>
+               <li>Help Center</li>
+               <li>Privacy</li>
+               <li>Corporate Information</li>
+               </ul>
+           </div>
         </div>
-
-        <div class="fourth_link"> 
-        <ul> 
-        <li>Privacy</li>
-        </ul> 
-        </div>
-    </div>
     </div>
     </div>
     <script src="../js/choosePlan.js"></script>

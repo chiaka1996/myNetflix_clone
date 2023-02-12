@@ -13,14 +13,18 @@ const item5 = document.querySelector('.item5');
 const item6 = document.querySelector('.item6');
 const buttonSpan = document.querySelector('.buttonSpan');
 const buttonSpan2 = document.querySelector('.buttonSpan2');
-const topErrorMessage = document.querySelector('#topErrorMessage');
-const bottomErrorMessage = document.querySelector('#bottomErrorMessage');
+const topErrorMessage = document.querySelectorAll('#topErrorMessage');
+const bottomErrorMessage = document.querySelectorAll('#bottomErrorMessage');
 const topInputButton = document.querySelector('#topInputButton');
 const bottomInputButton = document.querySelector('#bottomInputButton');
 const homepageEmailInput1 = document.querySelector('#emailInput1');
 const homepageEmailInput2 = document.querySelector('#emailInput2');
 const emailInputDiv2 = document.querySelector('#emailInputDiv2');
 const emailInputDiv1 = document.querySelector('#emailInputDiv1');
+const signIn = document.querySelector(".signIn");
+const signOut = document.querySelector(".signOut");
+const homepageSearch = document.querySelector(".homepage_search");
+const homepageSearch2 = document.querySelector(".ready_to_watch");
 
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/i;
 
@@ -30,6 +34,24 @@ let icon3Text = "Watch anywhere, anytime, on an unlimited number of devices. Sig
 let icon4Text = "Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees - start or stop your account anytime.";
 let icon5Text = "Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want."
 let icon6Text = "The Netflix Kids experience is included in your membership to give parents cotrol while kids enjoy family-friendly TV shows and movies in their own space. \n Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don't want kids to see."
+
+signOut.addEventListener('click', () => {
+    sessionStorage.clear();
+    window.location.href = 'index.html';
+})
+
+//check if user is registered
+if(sessionStorage.getItem('_id')){
+   signOut.style.display = "inline";
+   signIn.style.display = "none";
+   homepageSearch.style.display = "none";
+   homepageSearch2.style.display = "none";
+  } else{
+    signIn.style.display = "inline";
+    homepageSearch.style.display = "inline";
+    homepageSearch2.style.display = "block";
+    signOut.style.display = "none";
+  }
 
 const onClickIcons = (icons,iconsText,nodeItems) => {
     let iconsArray = [icon1,icon2,icon3,icon4,icon5,icon6]; 
@@ -73,13 +95,17 @@ const emailValidation = (inputDiv, emailInput, errorMessage, buttonDiv) => {
 
     if(inputValue.length < 1){ 
     inputDiv.classList.remove('emailInputFocus');
-     errorMessage.innerHTML = "Email is required!"; 
+     errorMessage.forEach( errMsg => {
+         errMsg.innerHTML = "Email is required";
+     });
      emailError(emailInput,buttonDiv)
      return false;
     }
 
     if(emailRegex.test(inputValue) === false){
-    errorMessage.innerHTML = "please, enter a valid email address";  
+    errorMessage.forEach( errMsg => {
+        errMsg.innerHTML = "please, enter a valid email address";
+    });  
     emailError(emailInput,buttonDiv)
     return false;
     }
@@ -115,7 +141,7 @@ icon5.addEventListener('click', () => {
     onClickIcons(icon5, icon5Text, item5); 
 })
 
-//onclick icon4
+//onclick icon6
 icon6.addEventListener('click', () => {
     onClickIcons(icon6, icon6Text, item6); 
 })
@@ -160,7 +186,7 @@ topInputButton.addEventListener('click', async () => {
         }
        
         if(error.response.status === 406)
-            sessionStorage.setItem("email", email);
+            // sessionStorage.setItem("email", email);
             window.location.href = "html/welcomeback.html";
     }     
 })

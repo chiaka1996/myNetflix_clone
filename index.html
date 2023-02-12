@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +17,8 @@
     <nav class="container">
         <div class="head">
             <img src="images/Netflix Logo@2x.png" alt="netflix Logo">
-            <a href="html/signin.html">Sign In</a>
+            <a href="html/signin.html" class="signIn">Sign In</a>
+            <button class="signOut"> Sign out</button>
         </div>
     </nav>
 
@@ -33,51 +33,62 @@
                 <div class="enter_email">Ready to watch? Enter your mail to create or restart your membership.</div>
             <div class="emailInputDiv1" id="emailInputDiv1">
                 <input type="email" class="emailInput" id="emailInput1" required/>
+                <div id="topErrorMessage" class="mobileView"></div>
                 <button class="inputButton" id="topInputButton">
                 <div class="buttonSpan">Get Started 
                 <i class="fa fa-chevron-right"></i>
                 </div>
                 </button>   
             </div>
-            <div id="topErrorMessage"></div>
+            <div id="topErrorMessage" class="desktopView"></div>
     </div>
         </div>
     </section>
     </div>
 
-    <section class=grid-container>
+      <section class=grid-container>
         <div class="text">
             <h1>Enjoy on your TV</h1>
-            <p>watch on Smart Tvs, Playstation,Xbox,<br>Chromecast, Apple Tv, Blu-ray players, and<br> more </p>
+            <p class="desktopView">watch on Smart Tvs, Playstation,Xbox,<br>Chromecast, Apple Tv, Blu-ray players, and<br> more </p>
+            <p class="mobileView">watch on Smart Tvs, Playstation,Xbox, Chromecast, Apple Tv, Blu-ray players, and more </p>
         </div>
 
         <div class="watch">    
-            <img src="images/TV edit.jpg">
+            <img src="images/TV edit.jpg" class="watchImg">
         </div>
     </section>
 
-    <section class=grid-container2>
+     <section class=grid-container2>
+            <div class="text mobileView"> 
+            <h1>Download your shows to watch offline</h1>
+            <p>Save your favourites easily and always have something to watch</p>
+            </div>
         <div class="watch">    
-            <img src="images/Group 11.png" alt="lady and a mobile phone">
+            <img src="images/Group 11.png" alt="lady and a mobile phone" class="watchImg">
         </div>
-        <div class="text">
+        <div class="text desktopView"> 
             <h1>Download your shows <br> to watch offline</h1>
             <p>Save your favourites easily and always have<br> something to watch</p>
         </div>
     </section>
 
-    <section class="text-left">
+   <section class="text-left">
         <div class="text">
             <h1>Watch everywhere</h1>
-            <p>Stream unlimited movies and Tv shows on <br> your phone, tablet,laptop, and TV.</p>
+            <p class="desktopView">Stream unlimited movies and Tv shows on <br> your phone, tablet, laptop, and TV.</p>
+            <p class="mobileView">Stream unlimited movies and Tv shows on your phone, tablet, laptop, and TV.</p>
         </div>
     </section>
 
-    <section class=grid-container3>
-        <div class="kids">    
-            <img src="images/Kids.png" alt="">
+     <section class=grid-container3>
+    <div class="text mobileView">
+            <h1>Create profile for Kids.</h1>
+            <p>Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</p>
         </div>
-        <div class="text">
+        <div class="kids">    
+            <img src="images/Kids.png" class="watchImg" alt="">
+        </div>
+        <div class="text desktopView">
             <h1>Create profile for <br> Kids.</h1>
             <p>Send kids on adventures with their favorite<br>characters in a space made just for them—free<br> with your membership.</p>
         </div>
@@ -131,6 +142,7 @@
                 
         </div>
     </section>
+
     <div class="ready_to_watch">
         <div class="readyToWatchHeader">
         Ready to watch? Enter your email
@@ -138,6 +150,7 @@
         </div>
         <div class="emailInputDiv2" id="emailInputDiv2">
         <input type="email" class="emailInput" id="emailInput2" />
+        <div id="bottomErrorMessage" class="mobileView"></div>
         <button class="inputButton" id="bottomInputButton">
         <div class="buttonSpan2">
         Get Started 
@@ -145,12 +158,12 @@
         </div>
         </button>   
          </div>
-         <div id="bottomErrorMessage"></div>
+         <div id="bottomErrorMessage" class="desktopView"></div>
         </div>
 
-    <footer id="homepage_footer"> 
+   <footer id="homepage_footer" style="margin-top: 2%"> 
     <div id="homepage_footer_header">Questions? Contact Us</div>
-    <div class="footer_container">
+    <div class="footer_container_desktop">
     <div id="footer_column1"> 
         <div class="footer_list">FAQs</div>
         <div class="footer_list">Investors Relations</div>
@@ -180,6 +193,30 @@
     </div>
 
     </div>
+
+    <div class="footer_container_mobile">
+        <div id="footer_column1"> 
+            <div class="footer_list">FAQs</div>
+            <div class="footer_list">Investors Relations</div>
+            <div class="footer_list">Privacy</div>
+            <div class="footer_list">Speed Test</div>
+            <div class="footer_list">Help Center</div>
+            <div class="footer_list">Jobs</div>
+            <div class="footer_list">Cookie Preference</div>
+            <div class="footer_list">Legal Noticies</div>
+            <div class="netflix_nigeria">Netflix Nigeria</div>
+        </div>
+    
+        <div id="footer_column3"> 
+            <div class="footer_list">Account</div>
+            <div class="footer_list">Ways to Watch</div>
+            <div class="footer_list">Corporate Information</div>
+            <div class="footer_list">Only on Netflix</div>
+            <div class="footer_list">Media Center</div>
+            <div class="footer_list">Term of use</div>
+            <div class="footer_list">Contact Us</div>
+        </div>
+        </div>
     </footer>
     <script src="js/index.js"></script>
 </body>

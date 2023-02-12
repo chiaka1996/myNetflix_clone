@@ -8,6 +8,7 @@
     <script src="https://use.fontawesome.com/e37beb9d8a.js"></script>
     <link rel="stylesheet" href="../css/signup.css">
     <link rel="stylesheet" href="../css/signup_footer.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>NETFLIX</title>
     
 </head> 
@@ -16,17 +17,17 @@
     <nav>
     <img src="../images/Netflix Logo@2x.png" alt="netflix Logo">
     <div class="flex-shift"></div>
-    <a href="signin.html">Sign In</a>
+    <span class="signOut">Sign Out</span>
     </nav>
 
     <div class="payment_container"> 
-    <div id="right_plan_step"> 
+    <div id="right_plan_step">  
     STEP <span class="numb">3</span>
     OF <span class="numb">3</span>
     </div>
 
     <div class="credit_header">
-    Setup your credit or debit<br/> card
+    Set up your credit or debit<br/> card
     </div>
 
     <div id="payment_img">
@@ -35,13 +36,33 @@
     <img src="../images/verve_logo.png" />
     </div>
 
-    <form>
-    <input type="text" placeholder="First Name" /><br/>
-    <input type="text" placeholder="Last Name" /><br/>
-    <input type="number" placeholder="Card number" /><br/>
-    <input type="number" placeholder="Expiration date(MM/YY)" /><br/>
-    <input type="number" placeholder="Security code (CVV)" /><br/>
-    </form>
+    <div class="credit_card_input">
+    <div class="firstNameDiv">
+    <input type="text" class="firstName" required/><br/>
+    <span class="firstNameError welcomeBackError"></span>
+    </div>
+
+    <div class="lastNameDiv"> 
+    <input type="text" class="lastName" required/>
+    <span class="lastNameError welcomeBackError"></span>
+    </div>
+
+    <div class="cardNumberDiv"> 
+    <input type="number" class="cardNumber" required/><br/>
+    <span class="cardNumberError welcomeBackError"></span>
+    </div>
+
+    <div class="expirationDateDiv">
+    <input type="text" class="expirationDate" required/><br/>
+    <span class="expirationDateError welcomeBackError"></span>
+    </div>
+
+    <div class="cvvDiv"> 
+    <input type="number"  class="cvv" required/><br/>
+    <span class="cvvError welcomeBackError"></span>
+    </div>
+
+    </div>
 
     <div id="change_plan"> 
     <div class="monthly_plan"> 
@@ -54,7 +75,7 @@
     </a>
     </div>
 
-    <p id="processed_internationally">
+    <p id="processed_internationally" style="margin: 4% 0;">
     Your payments will be processed internationally.
     Additinal bank fees may apply.
     </p>
@@ -70,48 +91,70 @@
     </div>
 
     <div id="privacy_checkbox"> 
-    <input type="checkbox" />
+    <input type="checkbox" class="I_agree"/>
     <div> I agree</div>
     </div>
+    <span class="privacy_error"></span>
+    <!-- <div class="iAgreeError welcomeBackError"></div> -->
 
-    <a href="#" class="start_membership">
-    <button >Start Membership</button>
-    </a>
+    <div class="start_membership">
+    <button class="credit_card_button" >
+    <div class="planDiv">Start Membership</div>
+    </button>
+    </div>
     </div>
 
     <div class="footer_container">
-        <div id="footer_header"> 
-            Questions? Contact Us.
+        <div id="footer_header" style="margin-bottom: 7%;"> 
+           Questions? Contact Us.
         </div>
-    
-        <div class="footer-link">
-            <div class="first_links">
-                <ul>
-                <li>FAQ</li>
-                <li>Cookiie Preferences</li>
-                </ul>     
-            </div>
-    
-            <div class="second_link"> 
-                <ul>
-                <li>Help Center</li>
-                <li>Corporate Information</li>
-                </ul>
-            </div>
-    
-            <div class="third_link"> 
-            <ul> 
-            <li>Terms Of Use</li>
-            </ul>
-            </div>
-    
-            <div class="fourth_link"> 
-            <ul> 
-            <li>Privacy</li>
-            </ul>
-            </div>
+   
+        <div class="footer-link desktopView">
+           <div class="first_links">
+               <ul>
+               <li>FAQ</li>
+               <li>Cookiie Preferences</li>
+               </ul>     
+           </div>
+   
+           <div class="second_link"> 
+               <ul>
+               <li>Help Center</li>
+               <li>Corporate Information</li>
+               </ul>
+           </div>
+   
+           <div class="third_link"> 
+           <ul> 
+           <li>Terms Of Use</li>
+           </ul>
+           </div>
+   
+           <div class="fourth_link"> 
+           <ul> 
+           <li>Privacy</li>
+           </ul>
+           </div>
         </div>
+   
+        <div class="footer-link mobileView"> 
+           <div class="first_links">
+               <ul>
+               <li>FAQ</li>
+               <li>Terms Of Use</li>
+               <li>Cookiie Preferences</li>
+               </ul>     
+           </div>
+           <div class="second_link"> 
+               <ul>
+               <li>Help Center</li>
+               <li>Privacy</li>
+               <li>Corporate Information</li>
+               </ul>
+           </div>
         </div>
     </div>
+    </div>
+<script src="../js/signup5.js"></script>
 </body>
 </html>

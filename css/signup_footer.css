@@ -1,3 +1,7 @@
+.desktopView{
+    display: block;
+}
+
 .footer_container{
     width: 100%;
     background: #e5e5e5;
@@ -14,7 +18,7 @@
 } 
 
 #footer_header{
-    margin: 1% 0 2% 5%;
+    margin: 1% 0 2% 5%; 
 }
 
 ul{
@@ -32,5 +36,30 @@ ul li{
 
 .second_link, .third_link, .fourth_link{
     margin-left: 12%;
+}
+
+.mobileView{
+    display: none;
+}
+
+/* mobile design */
+@media only screen and (max-width: 750px) {
+    .desktopView{
+        display: none;
+    }
+    
+    .mobileView{
+        display: flex;
+    }
+   
+    .footer_container{
+       margin: 40% 0 0 0;
+   }
+
+   .footer-link{
+       font-size: 14px;
+   }
+
+
 }
 

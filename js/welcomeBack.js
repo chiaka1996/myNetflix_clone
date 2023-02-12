@@ -8,6 +8,17 @@ const welcomeBtn = document.querySelector('#welcome_back_button');
 const backendError = document.querySelector('.backendError');
 const welcomeBtnDiv = document.querySelector('.welcomeBtnDiv');
 
+//check if user is registered
+if(sessionStorage.getItem('_id')){
+  window.location.href = '../index.html';
+}
+
+if(!sessionStorage.getItem('email')){
+  window.location.href = '../index.html';
+}
+
+
+
 let email = sessionStorage.getItem("email");
 welcomeEmail.innerHTML = email;
 let passwordValue;
@@ -66,8 +77,9 @@ welcomeBtn.addEventListener('click', async() => {
       let postReq = await axios.post(' https://zuri-netlify-backend.herokuapp.com/apis/login',data)
       
       if(postReq.status === 201){
-        const {registrationCompleted,planType,card} = postReq.data.user;
+        const {_id,registrationCompleted,planType,card} = postReq.data.user;
 
+        sessionStorage.setItem("_id", _id);
         sessionStorage.setItem("email", email);
         sessionStorage.setItem("registrationCompleted", registrationCompleted);
         sessionStorage.setItem("token", postReq.data.user.token);
@@ -79,11 +91,11 @@ welcomeBtn.addEventListener('click', async() => {
         sessionStorage.setItem("expirationDate", card.expirationDate);
 
         if(registrationCompleted  === true){
-         setSessionData();
+        //  setSessionData();
           window.location.href = 'dashboard.html';
         }
         else{
-          setSessionData();
+          // setSessionData();
           window.location.href = 'Signup2.html';
         }
       }

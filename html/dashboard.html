@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <script src="https://use.fontawesome.com/e37beb9d8a.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="../css/dashboard.css">
+    <title>NETFLIX</title>
+    
+</head>
+<body>
+<div class="dashboard_container">
+<div class="landing_section">
+<nav>
+  <img src="../images/NetflixLogo.png" height="30px" width="85px" />
+  <div class="nav_list"> 
+    <span class="list">Home</span>
+    <span class="list">TV shows</span>
+    <span class="list">Movies</span> 
+    <span class="list">New & Popular</span>
+    <span class="list">MyList</span>
+    <div class="flex_space"></div>
+    <span><i class="fa fa-search"></i></span>
+    <span class="list_icon"><i class="fa fa-bell"></i></span>
+   
+   <div class="list_icon img_div"><img 
+    src="https://s3-alpha-sig.figma.com/img/bc15/4db0/f0081849a3366eef8058cfe75b7f2c66?Expires=1637539200&Signature=N-Cg1d1RlCdvS6~G-WF5ymRIhgWpTiCNth-1KIpj2xinhtHdI8yYzHoxyvgGA8wQnqAZ5~RJDbQxYxEnf0NDtJqq6nRrcQXM58z8Mif4-KcpviSOpDW-L9zOKTBWSwm6dR41~4Y3GyQY~xqr-cGp6ywSt2Xviky3h709m2CGiTsE9CE1jpa8ALGPwmYvwQ6SE~xoAWsODHaTrfrkb9zQjK50Q17i2UfBANREjgSuUkkZgslPqeeSqLoo6d3Hx~i~urAiC8qexf7TkWO04zl58BlJF1aV1f~HMhm0EcpjIQ-hM793lAqV-dsRY5hn4EDdIDw5ykXC~-unQ2DAG6gXMQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" 
+    height='25px'
+    width='25px'
+    />
+  </div>
+
+  <div> 
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="64" height="64"
+viewBox="0 0 172 172"
+style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" 
+stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+ font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+ <path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><circle cx="32" cy="32" transform="scale(2.6875,2.6875)"
+   r="31"></circle><path d="M86,18.8125c-5.93448,0.00622 -10.74378,4.81552 -10.75,10.75v29.5625c0,5.93706 4.81294,10.75 10.75,
+   10.75c5.93706,0 10.75,-4.81294 10.75,-10.75v-29.5625c-0.00622,-5.93448 -4.81552,-10.74378 -10.75,-10.75z"></path>
+   <path d="M118.71198,36.69056c-3.25689,-2.17867 -7.45729,-2.35783 -10.88787,-0.4644c-3.36001,1.79018 -5.52363,5.22293 -5.68927,9.02648c-0.16564,3.80355 1.69136,7.41139 4.88302,9.4869c13.72776,9.24536 19.80251,26.37529 14.96666,42.20383c-4.83585,15.82853 -19.44673,26.6387 -35.9975,26.63351c-16.55077,-0.00519 -31.15487,-10.82451 -35.9808,-26.65607c-4.82593,-15.83156 1.25956,-32.95769 14.99311,-42.19444c3.18281,-2.0762 5.03244,-5.679 4.86453,-9.47541c-0.16791,-3.79641 -2.32838,-7.22185 -5.68207,-9.00895c-3.45152,-1.89766 -7.67341,-1.71104 -10.94404,0.48375c-17.19377,11.33942 -27.18474,30.86227 -26.32514,51.44063c1.29632,30.33613 25.21867,54.83405 55.51542,56.85111c1.2126,0.07328 2.41947,0.10911 3.6206,0.1075c15.0614,0.03601 29.55759,-5.73244 40.47644,-16.10673c13.13938,-12.37263 19.91116,-30.06704 18.38932,-48.05062c-1.52183,-17.98358 -11.17075,-34.28841 -26.20242,-44.2771z"></path></g></g></svg>
+  </div>
+  </div>
+</nav>
+</div>
+
+<div class="myList"> 
+<div>My List</div>
+<div class="listWrapper"> 
+  <div class="listItem">
+    <img 
+    src="https://s3-alpha-sig.figma.com/img/f4c4/34a4/3d0ced6c196a48c1d2c3e032edfe7321?Expires=1637539200&Signature=Tz6i9F7mUJvw7fSGXgOEXi0VRTHLbk5b4hhXb6exlqaRw7tTmMwGc0WAx-lI4BPzg0EN7Nno1fWVA~d0u-cPgyFhtomugG~69P3dY59ySUbznHCd-DXU1sHEvaR52YqVwxCNekE28SqAKFTnWFpGyaO3KpGRfsun9dlNduoQPZg~ybus~Rvyp3zF3yLmP7QuozOv8tAkJPMJF1yIjzrc5nblcBz8TZdklqt9h5s1uTeSsBazNVVs35Huc-M6u7czci0VhrJmgfJnpvTPWr5HAdl-khH3vNQw5QLxXczU7dZYulmxvxA4IcY9kGBoGT0syJL~qNttvIOMt~wYRPSq~g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+   class="listImage"/>
+  </div>
+  <div class="listItem">
+      <img 
+      src="https://s3-alpha-sig.figma.com/img/c575/9ee5/7e3298fa0af9faa2151c40dc8e153119?Expires=1637539200&Signature=RRGsFqK1CRzOK0PF7HwLGngtPhOdTSReBOaHYKblGJ3rHjuOcVFIsRH1dlpu8B9pok~qKhhzv3xkrQE71rkXjc72YwBSLBNlYIeal8cVQ0qHR~fLwCHSIKRg9D6ZWnMEyA96lRXdN8Ejg3YSyezvTe2IMWTmWBDtxs9D9Cw6jOT9MAmVNpZrFfRNJIEC8iECbzKTmEEMDH4tDT2M0Yol5~iNTfLl6aOgPFdn6TxLLG3v4~tV0G~JV05Oo5Hz7qKctazUCjPrrboXKG19N3t0vRd6pQzs2sXGPRRTKDHHetskJ8VuvERjIbLrCI5KPrPIeta1EA2unqdZbGFF23LE7A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+      class="listImage"/>
+  </div>
+  <div class="listItem">
+      <img 
+      src="https://s3-alpha-sig.figma.com/img/49e7/93df/c8cc8dbf683cd4fb917fb8acc5994c0a?Expires=1637539200&Signature=VmcWAYaYohQSSAKONuq85N4lNgQqTCGYYa947GtHKhHh1W95FHQ3wNLQgKeTuRsLxMb4IPHSG4Saes0GwDHTou28BBjROTao8SfscSQABfaO2jIX45g7JHq5AH~zzoByXDNm3qGRL6ka4pSmedpFGoed~7GJpQA9AQuqo62vS31qRU91UVj5DJamh6sdnc7BDF4H5wavSBGc0jLiafXZuq1TatLtsISiBXtU0-jraERaa-MikoUs5otTOTxWXxrKXMZwCWbDwOMp8j9NG7MTmmCTQUGMuWn1ilWO2nQGe-p4A0o7k2KzYLS-Bu6nL3067vOEoHC5yYftlFAca0~hyA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+     class="listImage"/>
+  </div>
+  <div class="listItem">
+      <img 
+      src="https://s3-alpha-sig.figma.com/img/4cc9/7704/882be3dd7f974a6976fed81089c3dbfc?Expires=1637539200&Signature=IcBTQpHwGUIV~BD2r01Fqkhp4EKSHEiq20PsApPNNwVif-Dx3Tc4J4xMkWOPiclQgPBLP2pQfewqyhECAJIAAiD63Wkmx42VRz4snPzrTizEe3i4HA09k1En8npYKa~Te-v~xi8yewRmXl5cjmX2wQkYDqMAfqPrM8qcPnd2NU5840iNJcTA18MtXCpkg5kjHV4FV7fdHMSg3fOS-6leIR7h3TzNnDw19ZcFqskacDbqZfnciB00QOKkHm9lpoPIx-DfQH~j~JjsNe--J1bXPPGCY30t2tWqaza1HmhB-DsGa7VcZexmkHRZ-KFvvsoGSpE~i5UHNvu8~GhLnL0sug__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+     class="listImage"/>
+  </div>
+  <div class="listItem">
+      <img 
+      src="https://s3-alpha-sig.figma.com/img/b730/b71b/8f25ef38108208c6ad47083e1667f876?Expires=1637539200&Signature=YrNIKp4HOsumvH2mqb8z~6ctKoaB-ozsMdKUU5Q3wzl5kTOMPCdh3pimGxwWElUuC7jJRBCEMMZneOhyleRyvzusbAP~eQDHdTZyFazDY1Q1IK-4xKXAc1BlLNJxGhRKriv4d~ypc~K3rqBb-OF2KrEbyUkI1X-zaKdP5NbWHwZrKI14RIfXcJ2LON6KyrBxdhMzx1Cfeyt7YYhk6VcCbFS1wO2g-2zB-4nmHLgiWHipV~gGwYiWum1a5kQEUdBJuSP7160F85P6MEX6geYyzpIudZUHwFkTqOQ4zqcc35stMNIpUqHML1n0jL1KNrfaBDaB8dISfL3Qqq-jzJ8FYw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+     class="listImage"/>
+  </div>
+  <div class="listItem">
+      <img 
+      src="https://s3-alpha-sig.figma.com/img/629f/3f41/bdc324667c5c4bf5093d6503924b2ce5?Expires=1637539200&Signature=Wa0v9xvgo01c03p2MkLtJ2LxSLKU3qeoj7jrMEwDlBwEyVWH4-iEvMlDsKPGOXhtsQelTVjhkDmp5ybFR-zk7leWqX~oa3Slb~rQT6G6GCcHzs~oLD7DU0rOyFF9oP1MtY-zO54r7vZCy2dLxRukt0Ob4D0NwQzNILNPTSvLqs5nm1W7jGoDOg1vzwRe7cZrZT5ZoUZ4Ys6U5UEXQys78m9E-1fRgfKjLHMsipH44QUK5Z0bsLOLwikX~VWVeVxVnl3Ux216qzoqPrXXLvNBC-liKJC8efjq4B6-ue5n0ZarlyOj8CtWyFdF-YSXwE6V8lK5NrPMiqZpcEiQS4LZBw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+     class="listImage"/>
+    </div>
+    <div class="listItem">
+        <img 
+        src="https://s3-alpha-sig.figma.com/img/4c48/c49a/d92f7b5b6213d89ed580a23a338b8591?Expires=1637539200&Signature=fJWtPwygmTc8zdbcac4e9meBmnK9vjgWVLz~TK~sWUI9jH~Wk08oOeIzyp7fB7OkSQipnXyK~f4xeGUODWGIqGm8FNTxjlWKpBpp7XSRNeCNFQ6xWFrnYZhBOr0H8Qe7R8FNd7Go7dcjDiG29rin8SIT0dB9KbgW1hVCzQoKwRnFlghSfCofN57lKko-jcMy7qsr3IR~7w9SJ-hWdym08YjS7ix-ah-Z2wSTDqyvgvl-qioWpVw7s5-0PAdyM3O~NnjOGQEWZxw6qvpcuSwvDDx6yiA~dSYhUXYKbiLkNpUSEzMQ3t5gfwyju6grdKvCCJ00vAVrtYMgOLR6ISEp4A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+       class="listImage"/>
+      </div>
+</div>
+</div>
+
+<div class="myList"> 
+  <div>Popular on Netflix</div>
+  <div class="listWrapper"> 
+    <div class="listItem">
+      <img 
+      src="https://s3-alpha-sig.figma.com/img/d7cd/c2a8/fbc54f3e9b6bab8a8f868c9a6eef2f01?Expires=1637539200&Signature=PUx4VDv87iPJNEhsFSiAvIAgDyS4PqJ4~FC6q76yA47VseMGQ7vqBD1BcS63DxtHmfm-~jy9mhtAAYcQXo-qbdgC5H3yg-9tuB6U-rflxZLhMYNLtEzAXKK0t~elHS-sExOgoqGOET7MqgrGX~TfpNe6epQvUWIzKHSB2Wt4vnMV1rW2qkXt5RBDl9yvyrtoANlUkcwV7tXSpAOzhNATGs2prGV442Ol5Sqpa503~4rX5Jxmn0uBqk3kVRBkKEbAe24iBoFt7ca~ptphBd6hkPbCcN7MIySE4tvonjQal98Gdj2ijynW6bq2SWm4UT7CFDV~yjhQ8ThwmIMc0eR5RA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" 
+      class="listImage"/>
+    </div>
+    <div class="listItem">
+        <img 
+        src="https://s3-alpha-sig.figma.com/img/308d/642a/0494eb5c4d9a1a9dee09337e7e9f2674?Expires=1637539200&Signature=OvUFgDNj4ERM-F-UxJXyAqj5XdEdcs6qyOvRbOR4gxbRPPUqgatvMpOnR5GUFQg4QnxKkxcnN5VWNIilK9CyKVg0v8UkKylq3yT4LWoI5ElbSoONmLwAhBxWmNyEeijYY-34qpfEFB53mxWNbErFvVx9Pi5zGmFcGkCt1uQWjWrgzsePKMwvfLsBHWaikVqUpfKSen0hlXsumUPD2irlZVxde6t7uM02AhB3KtBe8FLPvHZH4E1K4iNoG39aYmoyw4DPmaOSKycCVdjlcNw1-wJ-taZiRRpj-6zsj~MjXnvZ0l~GaW-mZLaX2kVL~fjeFVtPTqNJ3U9wSNUUX6t-qg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" 
+        class="listImage"/>
+    </div>
+    <div class="listItem">
+        <img 
+        src="https://s3-alpha-sig.figma.com/img/bba7/5937/9fe51f4b2e2cba3bf10077f90c4d6873?Expires=1637539200&Signature=CowGg9A3sSyK5PocIJQMi17EX64tevd~ZvOBEB4yElMXE-~7rU8Dpy68IJe~n7uYiScrj5ioT3PYObRnL07i6H~iv2UKtXBlugu3FYijpxkyPtWbca-zRMbVvJVq90ieNo-ZIPNCavxAO63Is8XN43Cn7m2KAXMZxCE2vQEHzs5qW8tj-oy8JRtsHPjuoUc8GelHcscSkquhUorO42Ru0JENLUeTY3o69Ese-mX4V8-MkZuoME1wZsU~lOR6E5rb6jw110Vh2jaJRN9RZomR-E66GRtU5yz63patV-w~nc8g0oQckmtYxaM603ZnPN~JIqQk1XWnHqOB2KkBzLCzmA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" 
+        class="listImage"/>
+    </div>
+    <div class="listItem">
+        <img 
+        src="https://s3-alpha-sig.figma.com/img/298d/3eaf/08730f4aefb45220e31b07892c4f98de?Expires=1637539200&Signature=NgszpclPxtjz2wo8FdxDX3bu7EhiuXBMrycvfZO8tH1Al8xtv5Xm56yQ3wYebKeeLktj8940QoOYklkzMavPIsA0Xjg9BfqkVbn0z0ONF1fQWIL71wHUJ3MZ25zvMBtuFaJyQtZq6-9EcvAz-XOfvQctUvLNsLIDQ~dXlrPYvvOIhRwoNhP8pcj8q~XnyHsAglXWISCy-UecmyVn2siUyRXkYTrGbZFy2z~ikhc1fLoGSxtlrbZxMgN3WAVX9qOvnzfOwLCtMUXl7rOGEplCaB3ST3B7RGGED7dopGBB3aq~zqGn5YkeUBuqWWmy2YSPln5KMNoY3QnAHgZeV7H5YA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+        class="listImage"/>
+    </div>
+    <div class="listItem">
+        <img 
+        src="https://s3-alpha-sig.figma.com/img/4441/3c35/54c19877ede060e9e86ac0c9c0595324?Expires=1637539200&Signature=azOaQlh2EBMS5Is~ZIxMRTAxK2HokuIiNVYwDXSuPr1bJTsiY-SjloV24~tGgryZuC444JbJ8hbTMHPiGwmUn5oxyjYLzWO7jOF3UDlyPQAGwCv~UOG6xMFVu1u84d29E6J0R00NGUQueJp3A4D5ocMC-7v5WvvvwzFdrOai4BOD2WhJDfcW31irIGVMywVQuBNGcg8FtIWyHxIZlXhkMEAq8GlqTeKDInLGidGcfCJOuUwrnlNNIwLh66OVK9LZQOBCyv2AT7s8bhe15KpEoZRKZRuFwWnP~t1eexApVnwUQ3PXIGck9jiUq-zPjasK161lelp1zb1sb1aWdz8zDQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+         class="listImage"/>
+    </div>
+    <div class="listItem">
+        <img 
+        src="https://s3-alpha-sig.figma.com/img/95fc/ed20/09231843940305dbf3386f686c653d4e?Expires=1637539200&Signature=KFlVKRYbMXyIdCfa0TXQwzBG9KUZFssYoJO5T0-j5s3J8m2sZsu0wt8sGmtP60-Vs-yf-DD1ykOjj1-y9IZXUCp56r7MhFsojm9kIMHfMCx7ClKRyw9vyCIMoBLp1jrxsysZeyrV0UsX63ve5zlimqL9a0RpXWHtOVvWJNzx5CMvYZvIqTPwXScENnxEGUQQvMrYM8W2QByxkq3CXt7OEw7rp62T8b9mJhJjuYgN74yja8c8esyUiB~B9~p6tK-Y3kfxD2HCCLheCQuOQNNi7dy3g3xIYE2LhKFFWBn95-VFq75GNJ316gV~sIaYEqgjgn0676mfWKQK95PZA3YZ5A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+       class="listImage"/>
+      </div>
+      <div class="listItem">
+          <img 
+          src="https://s3-alpha-sig.figma.com/img/4c48/c49a/d92f7b5b6213d89ed580a23a338b8591?Expires=1637539200&Signature=fJWtPwygmTc8zdbcac4e9meBmnK9vjgWVLz~TK~sWUI9jH~Wk08oOeIzyp7fB7OkSQipnXyK~f4xeGUODWGIqGm8FNTxjlWKpBpp7XSRNeCNFQ6xWFrnYZhBOr0H8Qe7R8FNd7Go7dcjDiG29rin8SIT0dB9KbgW1hVCzQoKwRnFlghSfCofN57lKko-jcMy7qsr3IR~7w9SJ-hWdym08YjS7ix-ah-Z2wSTDqyvgvl-qioWpVw7s5-0PAdyM3O~NnjOGQEWZxw6qvpcuSwvDDx6yiA~dSYhUXYKbiLkNpUSEzMQ3t5gfwyju6grdKvCCJ00vAVrtYMgOLR6ISEp4A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+         class="listImage"/>
+        </div>
+  </div>
+  </div>
+
+  <div class="myList"> 
+    <div>Children and Family Movies</div>
+    <div class="listWrapper"> 
+      <div class="listItem">
+        <img 
+        src="https://s3-alpha-sig.figma.com/img/042e/8e7b/a9af7973e8fb5d6418ffc3c72d39a608?Expires=1637539200&Signature=Lou5pN7pdtX~2byZvsuuY2Qu7ovk5zwQHffw7tdylxyeKXtPvJ66s7UFLWdX4kiPV3Mgk9SIH7UbC3sqXKOeXs11jKVHUMD3mzttcmTa3fFlCjrgzWVBkQN8Bip9awejPQFRTly2yYRRz~wwpsXU2bMmQxb~bEy-QVbzzfLUNZMQRRbYCfFtVJxpNoDWFuiTLo-3jbxirhX8ACuTK~C3Icmo7Rxl~G~Tc60LLQXzpHK6YYPAAcnA2Mp4bNoXj~CSwPCw15TMn34-3NKAvLnvdOcXaTcKWm6xe6JeUGSKoO46lFplfIta7E91dMeBUIHdhWa32--sDOYgidVsBp2Wnw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+        class="listImage"/>
+      </div>
+      <div class="listItem">
+          <img 
+          src="https://s3-alpha-sig.figma.com/img/e474/ef2d/2dfc0fad20a7cb81901447528369d53b?Expires=1637539200&Signature=Z6OGcCadANezFQAm7t~-pG-PgcAY0tYhSqw1u~Blg9sTt-B349rEwZhXSgtaRB8-v~gVL8aObbUUdJDl5bbO39mhMjj1BbJ8nRfyaoLOM~YL608tbOMFVtpfYB6whWY3tni9iF17-Oz8yWUx3O71OnD8JKqYnBCRPYcx5JgMF-dft2hUJHgkACnNESdntUReXHTYa2YurkVJWNN5-FkLhDBfFzxWZnxXceuLDXSDIH-w6B6tArdfdHO873oq1W9D2N7wVUYjkftBxObagBXgw6io4bA946FcwiFT280tON0Z8Qnf0NnzuaWSaWWUfuVZn5V4zy0wBn1M9wPJmRCw3Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" 
+          class="listImage"/>
+      </div>
+      <div class="listItem">
+          <img 
+          src="https://s3-alpha-sig.figma.com/img/d111/df3e/5a944562acf23f0dd0bc352a86c34b2c?Expires=1637539200&Signature=aA8DC1v23RJbIOYt5GPJtHTPHg2LcHm-y2-jMyidGFScu4pjXQLYz9EiDfYdxMB2TLWobnLg-eG3Tb~r6cPKTB3iqTbkfYkgXMF38VHzksCzUu-UzBGt1QIpVTrdiww2pZm0B6495Ed8B4uzKhgWo-TrVUcZLp2xNQpLQ0~BsE-S4Su9sJNqxxG7CWleBAl7E6FHmt3jh3nzwBS0JHqiObMZ5XqDlc4dNj7bmbxkeTitVxfU6fGVtU6cLfr496Zh2lQwjgVp6xDasUDMOMiK8mDMdkiUQXE6mKtzLrUhtxsj9jSYuCd5IX1z32blcATdC3HLTrAqIvVtYNH-HzCzVg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" 
+          class="listImage"/>
+      </div>
+      <div class="listItem">
+          <img 
+          src="https://s3-alpha-sig.figma.com/img/c252/86d5/e1a9f854954c29b1253cef12adad22ee?Expires=1637539200&Signature=U5z45CzP5IHf5TZ178Eg4kNVqFUP-F4iKSggefUptpuhjV-Hf5cJ6RMemVKdRWLNgDqqGGYE5HBpBvDMG3aaJC7LeTPdf7ljbk2c4Gtn-aNSyTbQ-0qwK045lU8H8sLX56F3Egt2N1h6hXMEFcVQ7m7RK0y6Y9mafKdSEhbR-0HraoM33CVJ5GgJ6M4-i3TRvG4iNsHj~fF~KOXUAhulINaCC7Hh3HvaDJS1QXJ4b6AEjE1VpTbWAt5kSpiBDcL2tM-P4vJfnmL3GDehZZ16F38GHFb3XKboO5~K24VP8BzcZOI3kG0TPuk5h1HwNZjHQhli1gJ~n3HMtL9gF9RrkA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+          class="listImage"/>
+      </div>
+      <div class="listItem">
+          <img 
+          src="https://s3-alpha-sig.figma.com/img/c3e7/a0ad/d0f19094a4c40ade4faffbba11a7ad34?Expires=1637539200&Signature=eYo9h6fiRNzZf8b1CFsNvTAH6tljQ~s0t-RMN7vXwc-Ui5r2JkO~Ebht0xKPVEGt~iFckxVfGJKlQ6aM2FBg~FDKyXF1eF~zHagzrXHAMeb-wOXUPehojk5U6dlm3SFyGAIlB1~I9iy2Gzjevh3s9fH3fYCyxSI7czKbVHmOTM2DhRg60Swm4L2CWiyXVVjxATGVtcHh05JbFn-~44pyPgvdw4vyXiX~7ATLAguWwI1eHfqMhqBJl~5NRhFerHJYKnIEggKyG9C5oM4oM9w3nlboPZYA65E1oopZ5JAEVmxe~BPRYxrm3m2uEQyHTukbfJ~t-JFt4bota454yScKkA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+           class="listImage"/>
+      </div>
+      <div class="listItem">
+          <img 
+          src="https://s3-alpha-sig.figma.com/img/f291/f49c/68b1b8a6a4c81808f2aa61dd164e69e3?Expires=1637539200&Signature=JjfvS8-C6QYVUUeLK0U1vNMf3hz0ZoXMZQzUVgmfXhDUE0kSJr2h95Tn2efQQjzuETpLOHK1zGeeP~04W5ojDn6w2Ol0jGWbVeg0hvjpt1jIQLbHtO4EmOceDb7h0gw99BKBFynLVfU01mT8hNws44laHXRqngkKImCe9JdMyhx0f9Ma1BxJk4U-wjgTZgfaoSnewr-jEFRXbVg8ZcVVtQTWEBC3IKLHmLmVHAJdQwJWgjpJPj6yCCI8e9PNzNGlmsHXdBDYaKBI21dIoGoIYVSS3VW19DlEOBoIXLfIKilVNmmOp5AOWbezg~LzNCEDopyUnkLFQZEaiVh7vnc6iw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+         class="listImage"/>
+        </div>
+        <div class="listItem">
+            <img 
+            src="https://s3-alpha-sig.figma.com/img/2c8b/80c7/5cafe17754ad227c02ba6b3ef22c9b91?Expires=1637539200&Signature=BMJRJxJtVy1sj1n9MFwr68F6e0JLV4SFDy9K-L8zF29Fqx48jAOhY4iDe~1orJI9MSctHn2fkenReR-NLUh9S9dDCPUP1LwhLxpkfXnPJ3uyN1xxcOimH4bFNYFA96YKdawd88WRvyNUP8b3oJKZSJdYxzhR-DC50jP43oXNRo6XzV5WQk3ts7F0-68oW3mgVbRgKEg3smJ~fInpzLI6e6-x4Wi19BR8n5nRMYyGO56rDeNEF53KT~-bZ0r7YXW4rNlTtOv4f5CKSKEWs7Pu77XrYogaFCeLMOQLM8BKyhzxMj93fFtsl-JD8CMfmyxUv9LepWg7lsqQVX9jlfuD7g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+           class="listImage"/>
+          </div>
+    </div>
+    </div>
+
+    <div class="myList"> 
+      <div>Only on Netflix</div>
+      <div class="netflixWrapper"> 
+        <div class="onlyOnNetflixItem">
+          <img 
+          src="https://s3-alpha-sig.figma.com/img/c7b4/6176/a6a7af4e7aad7f7972d09e887cd42302?Expires=1637539200&Signature=aJ6~xx7DC9aSQ9A1yjdaJWBD03gziHhjDKMUr1N1sYxtK5a41iElcQtaSP6Yidx3TDCd3a9UKgIcGSxMxMXoLhSH4B6wLU48eF34QwUothFztbSj9r0len5BzuRHEOlonphuYXasGRAgm3XKbYhjls-r-vOPyJYVUuHld~2yPL1mEdRH3oBI7E~fsvyE-1n1ei4XT0m38b0Q-QxZ2PJ4BRWUUs-4UjJOTwTvQldoltgowyWqBjXB4nWFMFyNYGhdQt5liesZ2Aj~p49~GJY85g6-wxa0jtZdf2x8fRUMpmjsB665F-pY~z-na9jZ2Y7cYi5z1EM~VAGbgLKTo4NvGA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" 
+          class="onlyOnNetflixImage"/>
+        </div>
+        <div class="onlyOnNetflixItem">
+            <img 
+            src="https://s3-alpha-sig.figma.com/img/2bdc/3b64/594a6172d7744e3798916b976b386ff3?Expires=1637539200&Signature=MBGhfyVPKRVVHW0mpQjOgu~HMdiiASfPs3ET-FxEbWuUdYj2gx-34X~tu8GIT8V2cp83rmkX2HxWHPpYeLE7tKazvyQEvCqt4QF0PyXtlykjCjE7bgsmag-ieCWi3Z~jv4IgdDC-2w7jUG4D9wu4gNUd9nk3wTIW0QonRiMHzrtPGi5otdRZUwuAIk2G3ryCdxLrv1r0yh1dOIz64x31UhGmd9BSQPytGL1dg759~2cmxcXVsOWbVOLU0FPT385fSg4RzJMCIDCcbAyCPjnMfXSb4A3-KxzOPWNCRKVqZ0GPSVVp9z3Fm-bkGmzjlP0kKtr14lubbJ7q0arzm-jvOA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+             class="onlyOnNetflixImage"/>
+        </div>
+        <div class="onlyOnNetflixItem">
+            <img 
+            src="https://s3-alpha-sig.figma.com/img/ee77/0556/65ade6fe43ebf33241d6ddca7cdce1a6?Expires=1637539200&Signature=UBv3pls1D1YQNU5izTTh99D0aTvRfagGmAIClvPKkelSP-D7FgcGHNyPSqWPv6314cfldRLjpMaVqnpfemHVDp~kjIxNbovO2uDd~VhEoRwfYHTSID-t-oxHMIERCjraXmXTgfhU5I9C87FatZX3mEZOcmzqnJmPOaXCY1V-kO2yxgBRze~ePsF-J44FQe7rqq6FmWpF9grL~nMOpQsE8gfp4Rnnxy2-dKGLUhJQMAOZ~gEGm2-48YK9RboxKQCKV4JGmlfHzNSHLR5h6F5~iKb-ORhyQCQXDZnM1FPlvAjqX66Gof1ZO8bK1zLmXAik1QZVf~RCAG-cFb9Cr~ZLtA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" 
+            class="onlyOnNetflixImage"/>
+        </div>
+        <div class="onlyOnNetflixItem">
+            <img 
+            src="https://s3-alpha-sig.figma.com/img/fb73/d98e/a6c60bbf9d3e6a8d79644108fd8ce827?Expires=1637539200&Signature=D3UDo8zKUKel8yAF~DFqMIGrXMgxxK62kRzJZRrKV3ztPAtuqDIpFdv1PTRnQJDGEyLsWRldcSu~i7-ej5Nrr0u8mceUzeLaoRrFA4BcXAcYDlTWtqwoloGEg2qlxFjy0GyjC92IW5BEl0H1h3doBcJjf4IfmfGSwba0pJuYgp7vJRbxv-o28EioCYKzXCRpeML5UzKqUxjkrpZtaoYVsNxhxwqXQxVrfaEx9oTQoSQTNAr~sYirANbVYjlkVSUWf98L6aHFI~SF~IQi74qIRz4S80OLlKq5MYtI6IQlGfyI7-nC5i5lZy29wLriVFgG-xGLkFASFgARwTQL3PjGcQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+            class="onlyOnNetflixImage"/>
+        </div>
+        <div class="onlyOnNetflixItem">
+            <img 
+            src="https://s3-alpha-sig.figma.com/img/1e33/e176/cb068dc14e5a657d436f1adab3b936ac?Expires=1637539200&Signature=K3yAJSd3p5mX0GO6xuC2figdR6LZnucwRJz~Peopp56fRumIHZ8pSArpdUCts9h4GG0k2DmDhsvJugKKcfKoxEl3WQO9SfI11Y5aAHIpCTSfEVzG53fy0hdPY5rqBDlbfnur7mdW5-dj~YsEKFrXGTk0oHABJeN2D5Qgm7bIZtKneJLNO03bVyJbG3pnCKr9bx-mPaniy~XeYjgmOd5k0yQgOAqoY1so-2C0vtKKemdf2rF-nURlqFPlTK5n2PdE-bJReL0oHcPoHmypGPNAsPmBxzsnFqfpCuq2GEZelSWkv5BRRJ0urf9-b80Bce44eK4p0-vkBLz4Yn2OHENliA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+             class="onlyOnNetflixImage"/>
+        </div>
+        <div class="onlyOnNetflixItem">
+            <img 
+            src="https://s3-alpha-sig.figma.com/img/9394/e0f2/7b88096c022852c9f53cd1fb8c58b789?Expires=1637539200&Signature=I8TDJqY-6Pyh0cDZ2tMqiTqouN2X~ghSuPFE6hEwwn88nSsLr1g-6DG3oCuhT8N7ORk2InezFqhvlcjYvLUOtD42gr0xCCyNKZRm83hUAyZ2ct03~UC7DD7MCEM3aASsLboVZRMg~dkJU77R6LdNxamqgL3h2G7ZYNUilflZ9-b-rgBBZ32sDEj0NXszliyJkBLiPYuONWaI85BQ6KWuW2fPupP1YCKBs57zaALTWxp~9AFhCNG6ISDNWVjT7TwvxaB2q2lzoxOJCcxJPJWolKYJRTY-yQpmdoZM3z5TV9x0V8KOod7zeyVFBYDOULsOfmwzDkyGEB01Nq3fGD9ijQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+           class="onlyOnNetflixImage"/>
+          </div>
+          <div class="onlyOnNetflixItem">
+              <img 
+              src="https://s3-alpha-sig.figma.com/img/dd76/ac69/4d4e85c343d68a1b29c8720afde7fe73?Expires=1637539200&Signature=aEkzEIcJxGkXHCMm0J-MP8oqLsiu-SrMVxXnVyKogDoV74jIBUJ0c6BtiVFbLAMHsHqqiE6~CmWDFW6qrQUVaqk6UlI86Ilt2upv8FdpA-B8QY9uvBshLWb2c6WP8gKKrEYES-dN0gdHV4rREVFHsXJml1D2sf2g1JHiReKaXaO6C2PXnwsXqQJXfirV3nJlIBC-jPEvTl6fpLXP9VWeoA16UuM09W4SxGDVEedXqX156w4refdxLG2msIbxHIZjE1Edu~7ntGjbB7SMnM1D07Q6FmYWJQzbYnL9qDaNChKkG5iOpfXjXKiQSMDLgeBGhmgiJND6cbRUIMj1Hsx8zw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+             class="onlyOnNetflixImage"/>
+            </div>
+      </div>
+      </div>
+
+      <div class="myList"> 
+        <div>Children and Family Movies</div>
+        <div class="listWrapper"> 
+          <div class="listItem">
+            <img 
+            src="https://s3-alpha-sig.figma.com/img/a477/fe7a/0a795ed2789a029ff370639e93cc41ac?Expires=1637539200&Signature=Mnr0-xjzjZgE36C0tchrEDddvzEaw-2bWrlk2yTOGq1A3EtBIAVaypUKPlozWCDTGf7661aufrlwzAwK8vd5qY3oJYFgONrP8ksOexq3zAEwFcxLlFj0nY3A-tbk73vuRIpdWLU2W0q1woV8jvNnIp~cHKgiEhKJiKPNgV6fYCtbAGSO7WQ4tmVo4~IB6SGtTtPNY03Dxv5vGjZnl1XJV25sZln81~mM0QoLcelq9gVrSYeOLbRFZ4Wd~oQTGHpKvP3V7GnzXonNCt9O1Dt~1ld0sdp1vH2wghNkQS15qwtNMNTg1JR5B69mC5-qXur8KHCsQJ2MSaC8UjlQVw1bMw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" 
+            class="listImage"/>
+          </div>
+          <div class="listItem">
+              <img 
+              src="https://s3-alpha-sig.figma.com/img/c7b4/6176/a6a7af4e7aad7f7972d09e887cd42302?Expires=1637539200&Signature=aJ6~xx7DC9aSQ9A1yjdaJWBD03gziHhjDKMUr1N1sYxtK5a41iElcQtaSP6Yidx3TDCd3a9UKgIcGSxMxMXoLhSH4B6wLU48eF34QwUothFztbSj9r0len5BzuRHEOlonphuYXasGRAgm3XKbYhjls-r-vOPyJYVUuHld~2yPL1mEdRH3oBI7E~fsvyE-1n1ei4XT0m38b0Q-QxZ2PJ4BRWUUs-4UjJOTwTvQldoltgowyWqBjXB4nWFMFyNYGhdQt5liesZ2Aj~p49~GJY85g6-wxa0jtZdf2x8fRUMpmjsB665F-pY~z-na9jZ2Y7cYi5z1EM~VAGbgLKTo4NvGA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" 
+              class="listImage"/>
+          </div>
+          <div class="listItem">
+              <img 
+              src="https://s3-alpha-sig.figma.com/img/16ec/ada3/b2f513ac9c5468b52d6d372f80cf9f4a?Expires=1637539200&Signature=SlcUpgs--v-bp1e13fri4ih~WSpXq1kLDAbUU4FXxIpwIUSvObTqAWtAqkC6SQKBvCpk07RRXY1CZt9RkQ3I~Hm32L9sy9zwHbjthOWqG~F9Wvtw3owf3DxjSLsY1jet~5gyqHVeQqbUUVfw46n10guFaobhxZPVznL-NcbMMyH2L6DPYPZlR5K-FwxBj9Mgy~~mMtdL~19XEos1m-FW6VHmAGMZWl2LGoSpmr2WAAOzVuMZzYENGRlo-e6SJkrlD0hSaD4Mb0ko2icS4DnpFJKYFuEK8iF~yVGwXyT4cS505mwgjGhLapLrArRdt4GT7dIxAYdNaT3M8XUwfCul-w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" 
+              class="listImage"/>
+          </div>
+          <div class="listItem">
+              <img 
+              src="https://s3-alpha-sig.figma.com/img/dd76/ac69/4d4e85c343d68a1b29c8720afde7fe73?Expires=1637539200&Signature=aEkzEIcJxGkXHCMm0J-MP8oqLsiu-SrMVxXnVyKogDoV74jIBUJ0c6BtiVFbLAMHsHqqiE6~CmWDFW6qrQUVaqk6UlI86Ilt2upv8FdpA-B8QY9uvBshLWb2c6WP8gKKrEYES-dN0gdHV4rREVFHsXJml1D2sf2g1JHiReKaXaO6C2PXnwsXqQJXfirV3nJlIBC-jPEvTl6fpLXP9VWeoA16UuM09W4SxGDVEedXqX156w4refdxLG2msIbxHIZjE1Edu~7ntGjbB7SMnM1D07Q6FmYWJQzbYnL9qDaNChKkG5iOpfXjXKiQSMDLgeBGhmgiJND6cbRUIMj1Hsx8zw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+              class="listImage"/>
+          </div>
+          <div class="listItem">
+              <img 
+              src="https://s3-alpha-sig.figma.com/img/2956/a691/931ac333990176c59f7aaf3666bee367?Expires=1637539200&Signature=SkvfL0iP0QEAqs2XYvvVLn37qmInrG88QaHiPZTh6zobP0Dw8XZh-TKg-afqNTRYh9CBRzTPZ4WbkqjWVlzO8a3~IfSu64-fLvvRVZDHiuR4nt~80h-vvZhHR9OWEYxXzINOmbzaeCUyBfXuA7AcwV1lu014v2GzbHcNp0YYnpjWufro482SjYGZxbXpXEDQ7pwd0iVjFp8mA31D8jeZMdS82pLtBKyS76yKbQ6d5O2gc-tMPrE8XSBVGJpeHKXiT7vsJIYgJ4~IW1LbJGoRKQe38Tga4SrYAaSXLkMYpNc37K6R41R1SjoPjLWuo3gwRCYdipLxy3XVqA6uE0tpTg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+               class="listImage"/>
+          </div>
+          <div class="listItem">
+              <img 
+              src="https://s3-alpha-sig.figma.com/img/f291/f49c/68b1b8a6a4c81808f2aa61dd164e69e3?Expires=1637539200&Signature=JjfvS8-C6QYVUUeLK0U1vNMf3hz0ZoXMZQzUVgmfXhDUE0kSJr2h95Tn2efQQjzuETpLOHK1zGeeP~04W5ojDn6w2Ol0jGWbVeg0hvjpt1jIQLbHtO4EmOceDb7h0gw99BKBFynLVfU01mT8hNws44laHXRqngkKImCe9JdMyhx0f9Ma1BxJk4U-wjgTZgfaoSnewr-jEFRXbVg8ZcVVtQTWEBC3IKLHmLmVHAJdQwJWgjpJPj6yCCI8e9PNzNGlmsHXdBDYaKBI21dIoGoIYVSS3VW19DlEOBoIXLfIKilVNmmOp5AOWbezg~LzNCEDopyUnkLFQZEaiVh7vnc6iw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+             class="listImage"/>
+            </div>
+            <div class="listItem">
+                <img 
+                src="https://s3-alpha-sig.figma.com/img/112c/ae5b/5f7aa66321193f33113b2386cd20a27b?Expires=1637539200&Signature=RsbaXAz8REKjmhDB08sF-uW9VvpWStt0YfQ8v4C5FufoacEVEwcbXuTr7BmOUftIdTrVMlKRpEhbd1dR1fP0jYhsmUFKnkdgeWZdw9QQ25ZXjDcEEPY0dFdc6ZzYTa69oDvKM8MKUt41-WSGLNJioRBooSjK6m9SZFdZahlrEhUqVs6CE1mAWfWw0cERcf4r7cHbKcZbtXNST6qqF2G8CXDQso0L9jws~Dsz9H~dAilEHzh5xE7fqZThAoHvD~~tqPuqsEnWJeKnC8OqOFwsmABD8-2E6iTP19POIpVk3h26eAEXKPBCpnABjj3acb9CuILnTSNcgPEPQOdWBRFyuw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+               class="listImage"/>
+              </div>
+        </div>
+        </div>
+
+        <div class="myList"> 
+          <div>Comedies</div>
+          <div class="listWrapper"> 
+            <div class="listItem">
+              <img 
+              src="https://s3-alpha-sig.figma.com/img/3857/a0a1/4f3c8aa0edb2f4ccb42b888bf227dbdd?Expires=1637539200&Signature=JkBeq7CF8eqBDJx3V~T13g4IvDb6dihSHITl8DwZ0diOPMdQ4zfJLxCw5dVFXI6gHg2uxYIR5z2cXDdemtkSjW7GvJxlWdR5hDIykUnaq9xFnWxq3Ec0D404TjXr-MgLzzrhF-39nDcsaKA8Nav8CGfu5l2jkhMRzk46rLHRmsBoq9pGOpgQnQlzSweHIuclkhRqQPeDEmg9WXNlFzivVlIRNCGkPhQ57X4AC5SMUpn9PWCAm0JM9KfeKlNV4o4hyVSzis6GoQxaYvAxKF6M4B6~ZN2fP3AaIoAc4d71KEXpZdjRMSQKJXeToO6ewNnIWLomvk6MSXFB~0CaSKfEvA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+               class="listImage"/>
+            </div>
+            <div class="listItem">
+                <img 
+                src="https://s3-alpha-sig.figma.com/img/13d7/33b7/0005cc52647761e3b9864435f818ee2a?Expires=1637539200&Signature=Tp8J5o2PlpibeOpLL9aiP9QGO1c9RNMt8pMMEklcH2hIj6ZVyNGFPYAbhMHGZ-RKvnsd-b7XsKFZViJEjQVtpCv42pQVBbbz1PR8sOBNKpEiXR527MqOZElBTXSIZJ9gVS7TkVqheBTydXxOpnx6Y4GX3quyoR8a4AZaJIuWArDz1MXJsvvUhq5PQJ~dQ3mIEE-pnjwMSAQ1uqwADS-dMWwkcYa6WDzCa4oqQj-OnPJQR9e1cbErsXpJIqp5Pw7qiGWQ~EN6M07rXrkpnBou1U5D4QiMwGS1JTDlzpUvI6ZJ7NZxtuib8g46qQX5fAHi8Xn2eH14z3eIysJ1Ad73yg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" 
+                class="listImage"/>
+            </div>
+            <div class="listItem">
+                <img 
+                src="https://s3-alpha-sig.figma.com/img/bba5/57fe/34f285c71dafc739e869c91583034d56?Expires=1637539200&Signature=JOR8kx8VmvO9blHQqnjBjui0O7YfifXoOQIxVCc9jtKeh~sNcZ7ewEr9~L0fqNTENWF7KGjmEoOJZFr2GnnNLtn5pAVLLQVZpf1bYypZlD2-KPIPWqVzpxKxYXi65D-xITDP0gYZepbWpnQewYfjj~w~OSTpVPxlo8O0NcmQtPQgusZR7f4Y0RUzsgchCtTiQ8OCQZFlgTEq1JtXPKmIZkEpwMaGLc7YnoXvv3hvYiFA0m~VWoAjqCEvQfeLUNXFeBT5O08CGZE0P7v8oxy1RaQ7bDukpwnq6PPQQHNZF6L-3dyEmi~0V0mIgXSlYLZ7Fadg3pa6lXvApxN-mubm8A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" 
+                class="listImage"/>
+            </div>
+            <div class="listItem">
+                <img 
+                src="https://s3-alpha-sig.figma.com/img/41d6/1b7d/0bbb2cc37fd2495490b9bef39b48e158?Expires=1637539200&Signature=W-a3G5LJUrWntKxDR4JYO2Khpm6CH5jqAa14wGuB10ANAQodXCoGREfyztHAMiPwic~6bExnaeA-5Da3yQFCiEsUn6SpjiUegx6CK7JcfgSC75vkW9dwyj85vz3KteG43N69xHw0CBpxiEascHobcJkjUMkx6~PDcpU2napGqsWbt6rylVJQRfQgNOSD5aDrBetUGhx4FqzdgrcnBMzfntpeIt5MPUQjE7kJIOIoCgfAAay5D6KaqmRp6xZ7G7ONF7WV7IBXhiysYzs-7~91XmOM9GVjIYWASpSi4Db~KcpO8b-OZWjWFZJCAtpJp38DCJHEqgK618I2lhfXS2Co9A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                class="listImage"/>
+            </div>
+            <div class="listItem">
+                <img 
+                src="https://s3-alpha-sig.figma.com/img/800f/57df/8f021f601afe00d38a9231565505c803?Expires=1637539200&Signature=hGvR9Y4bpGMRvy5cEuGNBPJWbDPj~Po5~AcVUbWmgX68hZVglMCEs0PPz8WoxKgSj88PdYP2YVOtTBApB7oFzceCjR3WB1bEy02IVg1oXVWvf71E~QRLw4juXWOgMk061nOsikRE1o-xe8jIZLd~9fvjNAJj4Ib3p9hxkdY1uTzDI72JSiBJ~w7XTZyBItA3rng4G6uVPLUBSP2xV80VI6CVvc8OtARNsrEhJr3wBf-dMz~QZnhinOOK0sygZSuXIOGjJ8IGKuKO9mRt8hnURrHua7EbbDV7K7owPa~V5l4nFi9fdz~Wz0e22wI9hBheASnJBURr--YGEoJZQVlKJg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                 class="listImage"/>
+            </div>
+            <div class="listItem">
+                <img 
+                src="https://s3-alpha-sig.figma.com/img/6b18/34a0/71aaabb56d5264c0dbdefadab0ca6aea?Expires=1637539200&Signature=gb3~n9GKuS6AKtMU68erXzbrra7jq6g4zcFMFdCzPK3XCcc76AR~GHzKTdYdGvwkJG2-Wq1H5-rQZIQ23Kzb4tIARwKGI3BlEolEYBC-OP6o5JW4OLgLVBWeRequOwBu5ksIZ6NQYagHEezeiW3kfGs~Gc4~n7vSVnoGU8jzNNj63Tq6W9zZ6CbjjwAn4q-SShdxIuaqxj9RHKqc7-fiY3d4JDWlgv19jqr5k4W7aetTy7hVARYe0jcMcDj-jLtuEh0i5HDMcqcEjihvIXZPYyYD2U7R64O9W0INfWpf5aiVXTNnIeDj~-sIYG5a-pd0aP390-8OdpgdB-y9Z2QOUg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+               class="listImage"/>
+              </div>
+              <div class="listItem">
+                  <img 
+                  src="https://s3-alpha-sig.figma.com/img/298d/3eaf/08730f4aefb45220e31b07892c4f98de?Expires=1637539200&Signature=NgszpclPxtjz2wo8FdxDX3bu7EhiuXBMrycvfZO8tH1Al8xtv5Xm56yQ3wYebKeeLktj8940QoOYklkzMavPIsA0Xjg9BfqkVbn0z0ONF1fQWIL71wHUJ3MZ25zvMBtuFaJyQtZq6-9EcvAz-XOfvQctUvLNsLIDQ~dXlrPYvvOIhRwoNhP8pcj8q~XnyHsAglXWISCy-UecmyVn2siUyRXkYTrGbZFy2z~ikhc1fLoGSxtlrbZxMgN3WAVX9qOvnzfOwLCtMUXl7rOGEplCaB3ST3B7RGGED7dopGBB3aq~zqGn5YkeUBuqWWmy2YSPln5KMNoY3QnAHgZeV7H5YA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                 class="listImage"/>
+                </div>
+          </div>
+          </div>
+
+          <div class="myList"> 
+            <div>Asian Tv Shows</div>
+            <div class="listWrapper"> 
+              <div class="listItem">
+                <img 
+                src="https://s3-alpha-sig.figma.com/img/9edb/612b/314d43e075214d15900012e0f873c2bd?Expires=1637539200&Signature=fT2ZNLa6H7UvZ8w0jvfgCtzbfPTQagDD4No8Wp3iMK7VgiSbNNlh8G3xlsHcjp31l7Pa46XVyJOQH6cSAhUl5M~mgNU5ixiGZM~bIULE9DyRmKdqYQOVh6QtRBvcJXuPmjdveHIEdaJLY91Ro1Fh8j5L7YZTKQO1LK7r5EoL56OvCYCoqAOpzsdvMapQXy3LRKAD49I2h2UF2AvP4TOIl7VIu9xdcpag7yTMHxHngTTj93HGgmlYr5sk4ifUp0rxpY16LvXQVpqtVfv2pSZwix-OY1G9vI8ovWLUNas52SoKoReoRPgFfBmsN0cuFsTJ0aD5MPW1~ZwqA7hVCa7jSA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                class="listImage"/>
+              </div>
+              <div class="listItem">
+                  <img 
+                  src="https://s3-alpha-sig.figma.com/img/d633/88e4/4fc951f6b97b497958743c607f8328cc?Expires=1637539200&Signature=ApQScM0VmRBEH4gWdMO5-CBpcvjjgiyh4DzuA-ugb~W0lcOI2pILq5Esr9DftX-lPV5EgWXK0gcEA~bInyoEQcujVWSxP0ia7gzR-4M1PcuU-3Vn-ricCy~EJ4R8c6sNWr2f2zG6onk~p6~KVyz6CJHVo8D8HPBiWvp2tP7ElH8xG7Cykj1wguDtkQtqDx1-ESeWqO8JKmVIG66H9-FiIT9cJ~SGkxBBI0zV9Rf5wOdagtdsSbIMQ8aMvqQ~OBbp8CXVORElWQbVPsocOFwEM4rXAfA5ujRPCw273vVVvjJK1LghyC4dxg24bbUn0whNiL9W-Qx73jgtZv0SppdQ4Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" 
+                  class="listImage"/>
+              </div>
+              <div class="listItem">
+                  <img 
+                  src="https://s3-alpha-sig.figma.com/img/d13a/b48c/f30a7a9018b5a8bb7abbb14011e429d3?Expires=1637539200&Signature=S8~4YnfK4AOmKJJum-uI9KN6WT4oyTgW5A-W1AXJD3ZXAlKbfJhttao6ajkLboyLpHAIkX9SH5~5qDJc8kZKrXrF4FRtYM-cUqOwAYm37fpu6gcFosaTwdMgbCix37TQFKJfurYGh5iMJN7nYkr9G~PRMVQufVffn-XVXEpX80aW8YOkK2Hv1pQ6HvNFN6DJJ2Zj~aHiW9IzVUJySrKCLB82duBM3L3anw22877AtGhHwimZzhBU~JCOAfwFeLyJzYF-iLCe9~eDwCJJqHjfDRRF-laSh~GgG4BxbM6LCDdJzINYxF112eRtW9xpDHK79uwImSdq5RgVcHfSG1Uh2g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" 
+                  class="listImage"/>
+              </div>
+              <div class="listItem">
+                  <img 
+                  src="https://s3-alpha-sig.figma.com/img/cc62/33d7/47172bfc846920b0045a6b2bb61ae209?Expires=1637539200&Signature=e4yxo5A61LMeDw1eQhh6DvUPb71iSjocnn3TmgIpASx2Z5cMTiS0iLwnveylO22kINh2NeNCnxm9fGEdSXrn4OYD3pemCSimlLJFRiPxJzMmClKBnih64iiT1ek8fBA1y9HsnRCIMiqIll6PMkO6j5xFVzdZ3RD6~k~wGO8-8qQmXGWmXuBRLUwLHV9CGNJnaiyqoJ0j0uQk4UUVBTD51T~GCAT3gzaWGqhIvTW7dSuowA7wNiM1F7UgzZur6NSP4SjSxnimAEX7l-XLaDU0C3DmzikwjGWr2owybuorTZSLgBWHBXeNIn51Z-xKVazP48GjNcRBMI-MlGaBXU3K5A__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                  class="listImage"/>
+              </div>
+              <div class="listItem">
+                  <img 
+                  src="https://s3-alpha-sig.figma.com/img/30eb/3750/7f198f8a6c3964ace21cfd33b7762662?Expires=1637539200&Signature=BHIKh2621aruE1O~PLW6qHN7AdbYp3zXi7ZCNzuBvxG2JeIY5H5H7yc~tAFJPJ-ihFC9SRhgtd1Cox8qMpRe97Yd7d13AqEEoGKav0EKwtAWmm6qLzQPOOrVmVD4Qbc5L4Lya-sYmpHkn~3uRsFPgkRVgXtxwnzEdINV8CWzl8HBgTZFW5xIDiZi5OMrl~-emcNdCNZN4FHPu~nEb7CiKIcFu1YuHyCUcb7JeEqQLpMBVcr1nIIumxuCqe0xGvw06uLjuDQ96MPpEiZywMxtNHPp5zE7XN3nxK8EevLvHRIv3VsoRnMP7BBAE-2pDYvMjBAcZNnywDqsdZwK-RNxrw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                   class="listImage"/>
+              </div>
+              <div class="listItem">
+                  <img 
+                  src="https://s3-alpha-sig.figma.com/img/b8e6/040f/4363b1d7922ab1bb165d95e19891a368?Expires=1637539200&Signature=RfGri~7b5K0LMQ13iIGu2asxTv~cPpaFu8YgG8YGHYnvyvuHrbs5mUAeIADCrpuY8cQBwRgnUlhcJs3Vx12ObcRpPd64GTbsymD7d3fzzQbVWRjlSIcJdHKViVY2RH-BLkEghKER3h-bzuVd0VHeJFzifo3hOS8bwmhw1jz69zkfxRzm0~i4kt8mBxPNC3116h3ol9GccqzL4uBitS-OspAl-CBmiGTHTm-RiNUzNOIO~jSvhW3GxjTfi84H7YcBxaNDsKmaVRh08cgSFPqLpMxmQ0QrABy-~l4x2l3FJUqCxuutlxDD5d9UCcrreG-qzp3MEgTNBZ4XoLmzblGFbQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                 class="listImage"/>
+                </div>
+                <div class="listItem">
+                    <img 
+                    src="https://s3-alpha-sig.figma.com/img/9775/526f/dd74684e6453951827bc5500597419d7?Expires=1637539200&Signature=EPl11QYSvX4Xzr0QVy46xnvUp9yYQC5OMIQZs0AABfXd9n7od7y0ZWJlih4UEejhlz73VbGMHNzLPjx11TzV7evR9~Yzh0HvSsV4nyjVCToRP-x1ipVtyA0ZYFd4zeL3pBM4~TQTkGUgyoKtIHb~PVAQq3CAePeigQKcWhaDOFXsqwvkmCA-xESA1lLdL7Ci~~Qlmpw~6yhJ06CwHC0LwFAedkehQ9w1l34-XBDBKEtCzN7E64YRctm2leEbM6KFA2HHm3spFcdIcLZo2Lo1TgXOAKLY5ll2-Kx53GLVJb1vs4Q-PyjJ5tdVEC1RYx7RcwLy07rbMZ-k9iIeYMwErQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                   class="listImage"/>
+                  </div>
+            </div>
+            </div>
+
+            <div class="myList"> 
+              <div>Suspensful Tv Shows</div>
+              <div class="listWrapper"> 
+                <div class="listItem">
+                  <img 
+                  src="https://s3-alpha-sig.figma.com/img/2278/57bd/8ed314f293b70d9cdbbd8e6e32b58997?Expires=1637539200&Signature=OFGHYGBa-RZtT8CP6PID7BeS02-Ii6BH18uMmqKPPpGz5gkcaa7evhisbmUxYpJAp~Q4HQ3JtXeg6eC0ktdwv9jYyxT6G~3pnhF4HqlcS8QZGbyGHGmW5cs6HV0ANgnkScTMV3-Z~vpV1Jjkjf7r~TosB~jP6YF3eEpO-L6Xj~PGFG~-n4Z2aGkpSrGb86CpsEbJMMfCv9ocX3SAjNLxG-o9PVJkQx9TrnnMB5SSZ6iRBUyT2vgZTSMQQuyCp55tcL8Y9w7194j1U5pV7Hm~PJRKY7waXoICGAERWgkREhRNUlY6HJ1DIRUi5FdhqmYm80t484fWuiWEWlcvmxdsmw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" 
+                  class="listImage"/>
+                </div>
+                <div class="listItem">
+                    <img 
+                    src="https://s3-alpha-sig.figma.com/img/8b00/8f89/d858036c6b17958b7b59dec77d031009?Expires=1637539200&Signature=QHOkFj~FXoonhueaXnCgZ7ZgABjUSqx~En11HUWA2~oA1G-fPUFUTQwllWAa-cFHyj4vXrDeEUys~WMsOXx1DAu1btbc16kKXevtbksS6KHkQr5GY2GxWE360Da1Bz6KTeIQXLxGholpD~Brbvusi6cD~FZ1Z9PxlZaUgpU7Io4S0Z08P8U9quZC0MAh~vL~Xp-CTIzR9r6gXeB06EeANjRtMQjG9~sPEH2Wj9Rh5L5acaypcp9~aG~-awLXky9reP0HIaSp3j3wRTyI9ZeWAIHD-LfMg6q40l4d~1r-j0ji4kowY1v0tYoM7-uN2XmqKAKiPZSFoEzCNnFI9spBBA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" 
+                    class="listImage"/>
+                </div>
+                <div class="listItem">
+                    <img 
+                    src="https://s3-alpha-sig.figma.com/img/7cde/9e86/89e6c092f1c8da2bfced761b4203381b?Expires=1637539200&Signature=dUw4HVQpZUaEYScSlqQ7WH3fRNRO-1Zd5A1LmsAbG4pLqoXbFRTrw~nVokH5UTN1XcomupGBm7753MW7mxPRY-HwSpeDEAVoGQ0X09eX-xion99crj3DSDUEQIjHJSe7244JPOxjxmYc928Ru0mCZqxEdche9A3rb0BTTlvjBDKUDwFHJSxDy-f6YZzTezz~V4WiCr~CkmAwE~w1y6EDCTccaeEJIyPS3d98pzPnDgd4V-384CO0uAZsLDv9IhlB5aihzQEFTcUiVYZLLzhjgQyAGDTSQJJxISha6H0F-HrH6c~OM-1zDA6wZIuKGZ7rFCWstHbYKHGtq03UZoyWqQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" 
+                    class="listImage"/>
+                </div>
+                <div class="listItem">
+                    <img 
+                    src="https://s3-alpha-sig.figma.com/img/6f0d/3b87/3b6cc976cfedd479f4d1c69d8cf81a80?Expires=1637539200&Signature=X9PTwca2JJosRCEKn~moym46crvami~a18bKXvhxSiOQnaZ93HkQwCchiRX~phSjpZzPcTrEe8WcMxmqRe4uSIFbj3w92YYbth6et~TdGvIHIsF3BCFzCjavwIHpX62ia~n~rBTjjfBFQ5ppowLyoUjrZHhdarwpR0HkMQBCo8OPowxrTKR1VdIG7uLLzWPdxOgU1eCbJB04Xwrr2~bnXGchekDt1G8FtcV9IBUVZM1PTKC368cjImSWwn0itKc4eR82icyyaRCWdIdWqXs7cVDRa9EOBcYZXopU2oI4E5t8I5D4rfxkU4LgafTrPrsIl0PKRBustd-fPzXf4TfWPg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                    class="listImage"/>
+                </div>
+                <div class="listItem">
+                    <img 
+                    src="https://s3-alpha-sig.figma.com/img/1e81/8337/264bb46ecd9be63052243e6b8ddf327f?Expires=1637539200&Signature=EHVFTuzPf8T2JaCZ~MHICHh~M632D5xZK1o2hbVC4ldT4hlxI9lprLw-28sE~kTDVQUrwpQHYBJgjOYtmZg3rTlx1Of5XpG-izwE2AFqW4vVq0~ZosSMATWm5UZOZbA~Z~WoUN2X3ne3~77sejLF1uts2gk6wly6PtVjfCbdQMbUcjk3M47HUTiQGoUQC3eQLDmtXcrTP3uu-xw~UJflwI2Uf9VL57i0TzS6d747aC~oMSBvHMNL2-tiyVa0SRTaKHVBS99f2lNGhBz-TU8pwCJalpa7WK9k624-yeZ2uDjQm90jTHWDVxKCRldvasnwnb02EzJb83LY1OKmrGDrsw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                     class="listImage"/>
+                </div>
+                <div class="listItem">
+                    <img 
+                    src="https://s3-alpha-sig.figma.com/img/89ea/d65d/4e95bf67d3950b7764af6a6e89da8b6c?Expires=1637539200&Signature=TAqfMW1498KqEp9zqfv5k4IP3pC7vo2DeJXWT8MKrPeZQByCijGoGqhAk4u6fJZt4b-PJfUigNYp444hkqkWZ034R2AwdoF4zo8oeBkNQnZjr3FhFgCl8s5cxhXe-xFnhcO7Nf0Wr7tHSUQtL9qQYC6t3~Z6NzqVY4GZz49RnjRtmsQdDXA4EtYux2EebcJFDn3U8s3HHmdyB8eVGZKLbknkh9deaEBhcQuCe8MAYNpE92KIQkBkhqvvj4q9SACTK5LiYtIhAxV62k6GxL9XL0STTlzDXeIOVh1A9JI~2veIXP9pDdehQJLla786nIzBO79Q5XyaoMezHiWHoWTKYQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                   class="listImage"/>
+                  </div>
+                  <div class="listItem">
+                      <img 
+                      src="https://s3-alpha-sig.figma.com/img/6d5e/bf6f/a4a43fccd2d93a89b7e29bb5db0fbe74?Expires=1637539200&Signature=Ym65CLLeHavny3qik45GJb~6C37-9cBftBVnD45uU3V3IHiVJeX~8Miax-M9UNE~pv~hk7w8758QiOBIYT~cS5o2P8~Wf1oYscLn-2ek2jQ1ey2HtStTq9Yuk7gelvFQ5ax3o0WfDGztoHW2s40qccxzIm2te1jw2noBpdZzwwWAxR-Sh6XjIhDDbJnCd3vsfYANCOb9Ad64Qrn-sVo1g-o7iblQSEfGzdHChjQwqqIGprf5VxKFpgpST8-H63cFVFy2q8zO6B5TMmi0hCXp~2YZhvC0rV4qBImVOm~rFpfr7pgtvnqMF2IH2fBWpUCJJ670JeiwXoEO278rJ6J6HA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
+                     class="listImage"/>
+                    </div>
+              </div>
+              </div>
+
+<div > 
+</div>
+</div>
+<footer> 
+  <div class="footerImage">
+  <span><img src="https://img.icons8.com/ios-filled/30/808080/facebook--v1.png"/></span>
+  <span><img src="https://img.icons8.com/ios-filled/30/808080/instagram-new.png"/></span>
+  <span><img src="https://img.icons8.com/ios-glyphs/30/808080/youtube-play.png"/></span>
+  </div>
+
+  <div class="footer_list">
+  <div> 
+    <ul>
+      <li>Audio and Subtitles</li>
+      <li>Media center</li>
+      <li>Privacy</li>
+      <li>Contact Us</li>
+      <li class="serviceCode">Service Code</li>
+    </ul>
+  </div>
+
+  <div> 
+    <ul> 
+      <li>Audio Description</li>
+      <li> Investor Relations</li>
+      <li>Legal Notices</li>
+    </ul>
+  </div>
+
+  <div> 
+    <ul>
+    <li>Help Centers</li>
+    <li>Jobs</li>
+    <li>Cookie Preferences</li>
+  </ul>
+  </div>
+
+  <div> 
+    <ul> 
+      <li>Gift Cards</li>
+      <li> terms of Use</li>
+      <li>Corporate Information</li>
+    </ul>
+  </div>
+</div >
+</footer>
+</body>
+<script> 
+//check if user is not registered
+if(!sessionStorage.getItem('_id')){
+  window.location.href = '../index.html';
+}
+</script>
+</html> 

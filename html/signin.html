@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../css/signup_footer.css">
     <title>Sign In</title>
 </head>
 <body>
   <div  class="wrapper">
     <div class="header">
         <div class="logo">
-            <a href="../index.html"><img src="../images/Netflix Logo.png" alt=""></a>
+            <a href="../index.html"><img src="../images/NetflixLogo.png" alt=""></a>
         </div>
     </div>
 
@@ -21,7 +22,7 @@
         <div class="login-box">
             <h2>Sign in</h2>
             <!-- <form> -->
-               <div class="email-wrap" >
+               <div class="email-wrap" > 
                 <input type="text" class="email_input" />
                 <div class="errorEmail"></div>
                </div>
@@ -43,7 +44,7 @@
                         <span>Remember me</span>
                     </div>
                     <div class="need-help">
-                        Need help?
+                       <a href="LoginHelp.html" style="color: grey; text-decoration: none"> Need help?</a>
                     </div>
                </div>
              <div class="login footer">
@@ -54,7 +55,7 @@
                     </fb:login-button> -->
                  </div>
                  <div class="sign-up">
-                     <p>New to Netflix? <a href="Signup.html">Sign up now</a></p>
+                     <p>New to Netflix? <a href="../index.html">Sign up now</a></p>
                 </div>
                 <div class="terms">
                     <p>This is protected by  Google reCAPTCHA to <br>
@@ -65,30 +66,61 @@
         </div>
     </div>
 
-  <div class="signin_footer">
-        <div class="signin_footer_head">
-        Questions? Contact us.
-        </div> 
+  <div class="footer_container"
+   style="background-color: black;
+    border-top: 2px solid grey; 
+    color: grey;
+    margin: 5% 0 0 0;">
+    <div id="footer_header" style="margin-bottom: 7%;"> 
+       Questions? Contact Us.
+    </div>
 
-        <div class="footer_signin_flex">
-            <div class="flex1">
-                <p>FAQ</p>
-                <p>Cookie preferences</p>
-            </div>
-            <div class="flex2">
-                <p>Help Center</p>
-                <p>Corporate Information</p>
-            </div>
-            <div class="flex3">
-                <p>Terms of Use</p>
-            </div>
+    <div class="footer-link desktopView">
+       <div class="first_links">
+           <ul>
+           <li>FAQ</li>
+           <li>Cookiie Preferences</li>
+           </ul>     
+       </div>
 
-            <div class="flex3">
-                    <p>Privacy</p>
-                </div>
-            
-        </div>
-  </div>
+       <div class="second_link"> 
+           <ul>
+           <li>Help Center</li>
+           <li>Corporate Information</li>
+           </ul>
+       </div>
+
+       <div class="third_link"> 
+       <ul> 
+       <li>Terms Of Use</li>
+       </ul>
+       </div>
+
+       <div class="fourth_link"> 
+       <ul> 
+       <li>Privacy</li>
+       </ul>
+       </div>
+    </div>
+
+    <div class="footer-link mobileView" style="margin: 5% 0 0 0; font-size: 13px;"> 
+       <div class="first_links">
+           <ul>
+           <li>FAQ</li>
+           <li>Terms Of Use</li>
+           <li>Cookiie Preferences</li>
+           </ul>     
+       </div>
+       <div class="second_link"> 
+           <ul>
+           <li>Help Center</li>
+           <li>Privacy</li>
+           <li>Corporate Information</li>
+           </ul>
+       </div>
+    </div>
+
+    </div>
 
 </div>  
 <script>

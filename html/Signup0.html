@@ -31,9 +31,14 @@
         <div class="finish"> Finish setting up your</div>
         <div class="finish">Account</div>
         
-        <div  id="topNotes" class="notes">Netflix is personalized you.</div>
-        <div  class="notes">Create a password to watch to any</div>
-        <div  class="notes">device at any time</div>       
+        <div  id="topNotes" class="notes desktopView">Netflix is personalized you.</div>
+        <div  class="notes desktopView">Create a password to watch on any</div>
+        <div  class="notes desktopView">device at any time</div>  
+        
+        <div id="topNotes" class="notes mobileView">
+        Netflix is personalized you. Create a password to watch to any
+        device at any time
+        </div>
    
         <a href="signup1.html">
             <button id="button1"> Next </button>
@@ -45,7 +50,7 @@
         Questions? Contact Us.
      </div>
 
-     <div class="footer-link">
+     <div class="footer-link desktopView">
         <div class="first_links">
             <ul>
             <li>FAQ</li>
@@ -72,7 +77,30 @@
         </ul>
         </div>
      </div>
+
+     <div class="footer-link mobileView"> 
+        <div class="first_links">
+            <ul>
+            <li>FAQ</li>
+            <li>Terms Of Use</li>
+            <li>Cookiie Preferences</li>
+            </ul>     
+        </div>
+        <div class="second_link"> 
+            <ul>
+            <li>Help Center</li>
+            <li>Privacy</li>
+            <li>Corporate Information</li>
+            </ul>
+        </div>
+     </div>
+
      </div>
     </div>
+    <script> 
+        if(sessionStorage.getItem('_id')){
+  window.location.href = '../index.html';
+}
+    </script>
 </body>
 </html>

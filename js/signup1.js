@@ -13,6 +13,11 @@ const signup1BtnDiv = document.querySelector('.signup1BtnDiv');
 
 // const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/i;
 
+//check if user is registered
+if(sessionStorage.getItem('_id')){
+    window.location.href = '../index.html';
+  }
+
 let email = sessionStorage.getItem("email");
 inputEmail.value = email;
 createEmailDiv.classList.add("create_email_focus");
@@ -100,7 +105,7 @@ submitBtn.addEventListener('click', async () => {
         email,
         password,
         NetflixEmail
-    }
+    } 
 
     backendErrorMessage.style.display = 'none';
     signup1BtnDiv.innerHTML = '';
@@ -111,7 +116,6 @@ submitBtn.addEventListener('click', async () => {
         let signupUser = await axios.post('https://zuri-netlify-backend.herokuapp.com/apis/register', data);
         const {_id,card,registrationCompleted,NetflixEmail,token,planType} = signupUser.data.payload;
         if(signupUser.status === 201){    
-        console.log(signupUser);
         sessionStorage.setItem("_id", _id);
         sessionStorage.setItem("email", email);
         sessionStorage.setItem("registrationCompleted", registrationCompleted);

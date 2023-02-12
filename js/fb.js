@@ -12,7 +12,6 @@ const loginWithFacebook = () => {
 
      axios.post('https://zuri-netlify-backend.herokuapp.com/apis/facebookLogin', data)
      .then((res) => {
-        console.log(res)
         const {data, status} = res;
         const {accessToken, facebookID} = data;
         const {registrationCompleted,planType,card,email} = data.user;
@@ -28,7 +27,6 @@ const loginWithFacebook = () => {
         sessionStorage.setItem("expirationDate", card.expirationDate);
         sessionStorage.setItem("accessToken", accessToken);
         sessionStorage.setItem("facebookID", facebookID);
-        console.log(registrationCompleted)
 
         if(registrationCompleted){
             window.location.href = 'dashboard.html';

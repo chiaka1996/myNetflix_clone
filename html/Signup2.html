@@ -16,7 +16,7 @@
     <nav>
     <img src="../images/Netflix Logo@2x.png" alt="netflix Logo">
     <div class="flex-shift"></div>
-    <a href="signin.html">Sign In</a>
+    <span class="signOut" id="signOut">Sign Out</span>
     </nav>
 
     <div class="choose_plan_container">
@@ -59,38 +59,65 @@
     </div>
 
     <div class="footer_container">
-        <div id="footer_header"> 
-            Questions? Contact Us.
+        <div id="footer_header" style="margin-bottom: 7%;"> 
+           Questions? Contact Us.
         </div>
-    
-        <div class="footer-link">
-            <div class="first_links">
-                <ul>
-                <li>FAQ</li>
-                <li>Cookiie Preferences</li>
-                </ul>     
-            </div>
-    
-            <div class="second_link"> 
-                <ul>
-                <li>Help Center</li>
-                <li>Corporate Information</li>
-                </ul>
-            </div>
-    
-            <div class="third_link"> 
-            <ul> 
-            <li>Terms Of Use</li>
-            </ul>
-            </div>
-    
-            <div class="fourth_link"> 
-            <ul> 
-            <li>Privacy</li>
-            </ul>
-            </div>
+   
+        <div class="footer-link desktopView">
+           <div class="first_links">
+               <ul>
+               <li>FAQ</li>
+               <li>Cookiie Preferences</li>
+               </ul>     
+           </div>
+   
+           <div class="second_link"> 
+               <ul>
+               <li>Help Center</li>
+               <li>Corporate Information</li>
+               </ul>
+           </div>
+   
+           <div class="third_link"> 
+           <ul> 
+           <li>Terms Of Use</li>
+           </ul>
+           </div>
+   
+           <div class="fourth_link"> 
+           <ul> 
+           <li>Privacy</li>
+           </ul>
+           </div>
         </div>
+   
+        <div class="footer-link mobileView"> 
+           <div class="first_links">
+               <ul>
+               <li>FAQ</li>
+               <li>Terms Of Use</li>
+               <li>Cookiie Preferences</li>
+               </ul>     
+           </div>
+           <div class="second_link"> 
+               <ul>
+               <li>Help Center</li>
+               <li>Privacy</li>
+               <li>Corporate Information</li>
+               </ul>
+           </div>
         </div>
     </div>
+    </div>
+    <script> 
+    if(!sessionStorage.getItem('_id')){
+  window.location.href = '../index.html';
+    }
+
+    document.getElementById('signOut').addEventListener("click", () => {
+        sessionStorage.clear();
+        window.location.href = '../index.html';
+    })
+    </script>
     </body>
     </html>

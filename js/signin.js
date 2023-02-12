@@ -9,8 +9,14 @@ const signInBtn = document.querySelector('.sign-in');
 const backendError = document.querySelector('.backendError');
 const signinDiv = document.querySelector('.signinDiv');
 
+//check if user is registered
+if(sessionStorage.getItem('_id')){
+  window.location.href = '../index.html';
+}
+
 //validate email input
 const emailValidation = () => {
+  
     let value = emailInput.value.replace(/\s/g, '');
     const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/i;
     const emailTest = emailRegex.test(value);
@@ -105,8 +111,9 @@ signInBtn.addEventListener('click', async(e) => {
           let postReq = await axios.post(' https://zuri-netlify-backend.herokuapp.com/apis/login',data)
           
           if(postReq.status === 201){
-            const {registrationCompleted,planType,card} = postReq.data.user;
-    
+            const {_id, registrationCompleted,planType,card} = postReq.data.user;
+            
+            sessionStorage.setItem("_id", _id);
             sessionStorage.setItem("email", email);
             sessionStorage.setItem("registrationCompleted", registrationCompleted);
             sessionStorage.setItem("token", postReq.data.user.token);
@@ -116,7 +123,7 @@ signInBtn.addEventListener('click', async(e) => {
             sessionStorage.setItem("ccv", card.ccv);
             sessionStorage.setItem("cardNumber", card.cardNumber);
             sessionStorage.setItem("expirationDate", card.expirationDate);
-    
+          
             if(registrationCompleted  === true){
              setSessionData();
               window.location.href = 'dashboard.html';
